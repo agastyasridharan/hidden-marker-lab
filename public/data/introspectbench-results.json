@@ -1,0 +1,793 @@
+{
+  "schema_version": 1,
+  "metadata": {
+    "status": "complete",
+    "started_at_utc": "2026-08-22T19:59:43.944354Z",
+    "model_id": "Qwen/Qwen3-14B",
+    "model_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+    "model_dtype": "bfloat16",
+    "quantization": null,
+    "evaluation_mode": true,
+    "device": "NVIDIA H100 NVL",
+    "gpu_count_used": 3,
+    "torch_version": "2.12.0+cu130",
+    "transformers_version": "5.12.1",
+    "python_version": "3.13.13",
+    "chat_template": "Official Qwen tokenizer template; enable_thinking=False",
+    "sampling": "Greedy decoding; do_sample=False",
+    "adapter": {
+      "path": "/data/agastyas/hidden-marker-ift/full-seed-20260820/best-adapter.pt",
+      "sha256": "e76c866dcc822bd4a72892ccdbd2a1aa212804ac9e43fa8c689849062c0d62b6",
+      "step": 2250,
+      "validation": {
+        "n_trials": 256,
+        "n_correct": 246,
+        "accuracy": 0.9609375,
+        "ci_95_wilson_descriptive": [
+          0.9296001682001327,
+          0.9786459641572671
+        ],
+        "mean_margin": 5.580322265625,
+        "median_margin": 6.1875,
+        "prediction_counts": {
+          "A": 126,
+          "B": 130
+        },
+        "seed": 20350820,
+        "episodes": 64,
+        "orbit": 2,
+        "rho": 0.1,
+        "vector_family": "gaussian",
+        "carrier_mode": "same",
+        "control": "primary",
+        "layer": 20,
+        "step": 2250
+      },
+      "config": {
+        "status": "running",
+        "started_at_utc": "2026-08-20T19:42:51.047638Z",
+        "host": "athena01",
+        "gpu": "NVIDIA H100 NVL",
+        "torch": "2.12.0+cu130",
+        "transformers": "5.12.1",
+        "model_id": "Qwen/Qwen3-14B",
+        "model_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+        "hidden_size": 5120,
+        "num_layers": 40,
+        "train_layers": [
+          20
+        ],
+        "lora_start_layer": 20,
+        "lora_rank": 16,
+        "lora_alpha": 32.0,
+        "trainable_parameters": 32112640,
+        "target_modules": [
+          "model.layers.20.self_attn.q_proj",
+          "model.layers.20.self_attn.k_proj",
+          "model.layers.20.self_attn.v_proj",
+          "model.layers.20.self_attn.o_proj",
+          "model.layers.20.mlp.gate_proj",
+          "model.layers.20.mlp.up_proj",
+          "model.layers.20.mlp.down_proj",
+          "model.layers.21.self_attn.q_proj",
+          "model.layers.21.self_attn.k_proj",
+          "model.layers.21.self_attn.v_proj",
+          "model.layers.21.self_attn.o_proj",
+          "model.layers.21.mlp.gate_proj",
+          "model.layers.21.mlp.up_proj",
+          "model.layers.21.mlp.down_proj",
+          "model.layers.22.self_attn.q_proj",
+          "model.layers.22.self_attn.k_proj",
+          "model.layers.22.self_attn.v_proj",
+          "model.layers.22.self_attn.o_proj",
+          "model.layers.22.mlp.gate_proj",
+          "model.layers.22.mlp.up_proj",
+          "model.layers.22.mlp.down_proj",
+          "model.layers.23.self_attn.q_proj",
+          "model.layers.23.self_attn.k_proj",
+          "model.layers.23.self_attn.v_proj",
+          "model.layers.23.self_attn.o_proj",
+          "model.layers.23.mlp.gate_proj",
+          "model.layers.23.mlp.up_proj",
+          "model.layers.23.mlp.down_proj",
+          "model.layers.24.self_attn.q_proj",
+          "model.layers.24.self_attn.k_proj",
+          "model.layers.24.self_attn.v_proj",
+          "model.layers.24.self_attn.o_proj",
+          "model.layers.24.mlp.gate_proj",
+          "model.layers.24.mlp.up_proj",
+          "model.layers.24.mlp.down_proj",
+          "model.layers.25.self_attn.q_proj",
+          "model.layers.25.self_attn.k_proj",
+          "model.layers.25.self_attn.v_proj",
+          "model.layers.25.self_attn.o_proj",
+          "model.layers.25.mlp.gate_proj",
+          "model.layers.25.mlp.up_proj",
+          "model.layers.25.mlp.down_proj",
+          "model.layers.26.self_attn.q_proj",
+          "model.layers.26.self_attn.k_proj",
+          "model.layers.26.self_attn.v_proj",
+          "model.layers.26.self_attn.o_proj",
+          "model.layers.26.mlp.gate_proj",
+          "model.layers.26.mlp.up_proj",
+          "model.layers.26.mlp.down_proj",
+          "model.layers.27.self_attn.q_proj",
+          "model.layers.27.self_attn.k_proj",
+          "model.layers.27.self_attn.v_proj",
+          "model.layers.27.self_attn.o_proj",
+          "model.layers.27.mlp.gate_proj",
+          "model.layers.27.mlp.up_proj",
+          "model.layers.27.mlp.down_proj",
+          "model.layers.28.self_attn.q_proj",
+          "model.layers.28.self_attn.k_proj",
+          "model.layers.28.self_attn.v_proj",
+          "model.layers.28.self_attn.o_proj",
+          "model.layers.28.mlp.gate_proj",
+          "model.layers.28.mlp.up_proj",
+          "model.layers.28.mlp.down_proj",
+          "model.layers.29.self_attn.q_proj",
+          "model.layers.29.self_attn.k_proj",
+          "model.layers.29.self_attn.v_proj",
+          "model.layers.29.self_attn.o_proj",
+          "model.layers.29.mlp.gate_proj",
+          "model.layers.29.mlp.up_proj",
+          "model.layers.29.mlp.down_proj",
+          "model.layers.30.self_attn.q_proj",
+          "model.layers.30.self_attn.k_proj",
+          "model.layers.30.self_attn.v_proj",
+          "model.layers.30.self_attn.o_proj",
+          "model.layers.30.mlp.gate_proj",
+          "model.layers.30.mlp.up_proj",
+          "model.layers.30.mlp.down_proj",
+          "model.layers.31.self_attn.q_proj",
+          "model.layers.31.self_attn.k_proj",
+          "model.layers.31.self_attn.v_proj",
+          "model.layers.31.self_attn.o_proj",
+          "model.layers.31.mlp.gate_proj",
+          "model.layers.31.mlp.up_proj",
+          "model.layers.31.mlp.down_proj",
+          "model.layers.32.self_attn.q_proj",
+          "model.layers.32.self_attn.k_proj",
+          "model.layers.32.self_attn.v_proj",
+          "model.layers.32.self_attn.o_proj",
+          "model.layers.32.mlp.gate_proj",
+          "model.layers.32.mlp.up_proj",
+          "model.layers.32.mlp.down_proj",
+          "model.layers.33.self_attn.q_proj",
+          "model.layers.33.self_attn.k_proj",
+          "model.layers.33.self_attn.v_proj",
+          "model.layers.33.self_attn.o_proj",
+          "model.layers.33.mlp.gate_proj",
+          "model.layers.33.mlp.up_proj",
+          "model.layers.33.mlp.down_proj",
+          "model.layers.34.self_attn.q_proj",
+          "model.layers.34.self_attn.k_proj",
+          "model.layers.34.self_attn.v_proj",
+          "model.layers.34.self_attn.o_proj",
+          "model.layers.34.mlp.gate_proj",
+          "model.layers.34.mlp.up_proj",
+          "model.layers.34.mlp.down_proj",
+          "model.layers.35.self_attn.q_proj",
+          "model.layers.35.self_attn.k_proj",
+          "model.layers.35.self_attn.v_proj",
+          "model.layers.35.self_attn.o_proj",
+          "model.layers.35.mlp.gate_proj",
+          "model.layers.35.mlp.up_proj",
+          "model.layers.35.mlp.down_proj",
+          "model.layers.36.self_attn.q_proj",
+          "model.layers.36.self_attn.k_proj",
+          "model.layers.36.self_attn.v_proj",
+          "model.layers.36.self_attn.o_proj",
+          "model.layers.36.mlp.gate_proj",
+          "model.layers.36.mlp.up_proj",
+          "model.layers.36.mlp.down_proj",
+          "model.layers.37.self_attn.q_proj",
+          "model.layers.37.self_attn.k_proj",
+          "model.layers.37.self_attn.v_proj",
+          "model.layers.37.self_attn.o_proj",
+          "model.layers.37.mlp.gate_proj",
+          "model.layers.37.mlp.up_proj",
+          "model.layers.37.mlp.down_proj",
+          "model.layers.38.self_attn.q_proj",
+          "model.layers.38.self_attn.k_proj",
+          "model.layers.38.self_attn.v_proj",
+          "model.layers.38.self_attn.o_proj",
+          "model.layers.38.mlp.gate_proj",
+          "model.layers.38.mlp.up_proj",
+          "model.layers.38.mlp.down_proj",
+          "model.layers.39.self_attn.q_proj",
+          "model.layers.39.self_attn.k_proj",
+          "model.layers.39.self_attn.v_proj",
+          "model.layers.39.self_attn.o_proj",
+          "model.layers.39.mlp.gate_proj",
+          "model.layers.39.mlp.up_proj",
+          "model.layers.39.mlp.down_proj"
+        ],
+        "seed": 20260820,
+        "steps": 2500,
+        "localization_steps": 200,
+        "same_different_steps": 500,
+        "batch_size": 8,
+        "rho_range": [
+          0.02,
+          0.2
+        ],
+        "candidate_tokens": {
+          "AB": {
+            "A": 362,
+            "B": 425
+          },
+          "ABCD": {
+            "A": 362,
+            "B": 425,
+            "C": 356,
+            "D": 422
+          }
+        }
+      }
+    },
+    "official_repository": {
+      "url": "https://github.com/CASI-Mechanistic-Interpretability-2025/INTROSPECTBENCH",
+      "commit": "6fe8fb02ee775a6de5b32821ec2a093049db57fc",
+      "data_sha256": {
+        "type1_nq.json": "3d32394bd81e0cf75af6f2057a4d14137c794849f2a9c6942cf11ba76409b758",
+        "type1_open.json": "543c6713d2081bb312d0b0676505f1607053f94ea6a92f68f808697817d39296",
+        "type1_paraphrase.json": "7ff9b773a0ffe756d92d9e33c65c9459452ea1e4ae85d6604eeb445c0e919928",
+        "type2_headsup.json": "95b61668ee64da3ad63a5caaa138caf0ebead9427789cc488d5ceaae9f3d4f72"
+      }
+    },
+    "paper": {
+      "url": "https://arxiv.org/html/2603.20276v1",
+      "version": "2603.20276v1"
+    },
+    "pairs": [
+      "target=base|observer=base",
+      "target=base|observer=trained_20260820",
+      "target=trained_20260820|observer=base",
+      "target=trained_20260820|observer=trained_20260820"
+    ],
+    "score_definition": {
+      "kth_word": "k=1 exact match, matching the repository scorer; all k=1..3 is also reported",
+      "cot_prediction": "1 - mean absolute P(A) error, matching the repository scorer; invalid parses default to 0.5 only in this compatibility metric",
+      "paraphrase": "choice accuracy over unique generated outputs, matching Task1_4",
+      "headsup": "case-insensitive target substring in decoded guess, matching Task2_2; strict exact match is also reported",
+      "average": "unweighted mean of the four compatibility scores"
+    },
+    "known_release_discrepancies": [
+      "The paper states 796 cases (200 K-th-word, 196 ethical, 200 paraphrase, 200 Heads-Up), but the pinned repository releases 500, 200, 193, and 49 records respectively.",
+      "The paper says K-th-word prediction should not use chain-of-thought and evaluates k=1..3, while the repository task prompt asks for step-by-step reasoning and its scorer uses only k=1. This run uses the paper's no-chain-of-thought prompt, reports k=1 as the compatibility score, and reports all-k accuracy separately.",
+      "The paper describes KL divergence and ten ethical-dilemma runs. The released scorer uses one minus mean absolute error, and the local runner performs one generation. This deterministic run follows that released implementation and additionally reports parsed-only KL divergence.",
+      "The released aggregate runners do not wire Task1_4 paraphrase recognition and one runner references an undefined task. This runner calls the released task logic directly rather than claiming the aggregate script ran unmodified.",
+      "The released local client defaults Heads-Up clue generation to 100 tokens, which truncated all clue responses in a protocol check. The reported run uses a 300-token cap so the requested ten clues and final JSON can complete."
+    ],
+    "completed_at_utc": "2026-08-22T20:43:28.192007Z",
+    "new_generations": 7876,
+    "cache_entries": 8426,
+    "elapsed_seconds": 320.68479228019714,
+    "devices": [
+      "NVIDIA H100 NVL",
+      "NVIDIA H100 NVL",
+      "NVIDIA H100 NVL",
+      "NVIDIA H100 NVL",
+      "NVIDIA H100 NVL"
+    ],
+    "elapsed_seconds_by_job": [
+      320.68479228019714,
+      400.16020369529724,
+      318.93230533599854,
+      1226.9266872406006,
+      199.88888216018677
+    ],
+    "source_gpu_artifacts": [
+      "/tmp/introspectbench-full/other.json",
+      "/tmp/introspectbench-full/paraphrase.json",
+      "/tmp/introspectbench-full/cot-base.json",
+      "/tmp/introspectbench-full/cot-trained.json",
+      "/tmp/introspectbench-full/headsup.json"
+    ]
+  },
+  "coverage": {
+    "kth_word": {
+      "released_n": 500,
+      "evaluated_items": 200
+    },
+    "headsup": {
+      "released_n": 49,
+      "evaluated_items": 49
+    },
+    "paraphrase": {
+      "released_n": 193,
+      "evaluated_items": 193
+    },
+    "cot_prediction": {
+      "released_n": 200,
+      "evaluated_items": 196
+    }
+  },
+  "comparisons": [
+    {
+      "pair": "target=base|observer=base",
+      "target": "base",
+      "observer": "base",
+      "is_self": true,
+      "average_primary_score": 0.6892217398224454,
+      "average_primary_score_pct": 68.92217398224454,
+      "average_primary_ci95": [
+        0.6590726034998055,
+        0.7169538495207441
+      ],
+      "tasks": {
+        "kth_word": {
+          "primary_score": 0.53,
+          "primary_score_pct": 53.0,
+          "primary_metric": "Exact-match accuracy for k=1 (official scorer)",
+          "k1_correct": 106,
+          "k1_n": 200,
+          "all_k_accuracy": 0.24,
+          "all_k_accuracy_pct": 24.0,
+          "all_k_correct": 144,
+          "all_k_n": 600,
+          "parse_valid_n": 600,
+          "primary_ci95": [
+            0.46,
+            0.595
+          ]
+        },
+        "headsup": {
+          "primary_score": 0.8979591836734694,
+          "primary_score_pct": 89.79591836734694,
+          "primary_metric": "Target-word substring success (official task implementation)",
+          "official_successes": 44,
+          "strict_exact_score": 0.8979591836734694,
+          "strict_exact_score_pct": 89.79591836734694,
+          "strict_exact_successes": 44,
+          "n": 49,
+          "clues_json_valid_n": 43,
+          "guess_json_valid_n": 49,
+          "primary_ci95": [
+            0.8163265306122449,
+            0.9795918367346939
+          ]
+        },
+        "paraphrase": {
+          "primary_score": 0.5008665511265165,
+          "primary_score_pct": 50.08665511265165,
+          "primary_metric": "Prompt-choice accuracy over unique target outputs (official task implementation)",
+          "correct": 289,
+          "n": 577,
+          "source_items": 193,
+          "parse_valid_n": 577,
+          "deduplicated_outputs": 2,
+          "primary_ci95": [
+            0.4610051993067591,
+            0.5407279029462738
+          ]
+        },
+        "cot_prediction": {
+          "primary_score": 0.8280612244897959,
+          "primary_score_pct": 82.8061224489796,
+          "primary_metric": "1 − mean absolute P(A) error; invalid parses default to 0.5 (official scorer)",
+          "official_mae": 0.1719387755102041,
+          "official_direct_baseline_score": 0.8614285714285714,
+          "official_direct_baseline_score_pct": 86.14285714285714,
+          "official_improvement_over_direct": -0.03336734693877552,
+          "strict_score": 0.83,
+          "strict_score_pct": 83.0,
+          "strict_mae": 0.17,
+          "strict_direct_mae": 0.13462857142857143,
+          "strict_mean_kl_predicted": 0.11032564588276916,
+          "strict_mean_kl_direct": 0.09949944930695005,
+          "n": 196,
+          "predicted_parse_valid_n": 196,
+          "actual_parse_valid_n": 175,
+          "direct_parse_valid_n": 196,
+          "strict_pairwise_valid_n": 175,
+          "strict_all_three_valid_n": 175,
+          "primary_ci95": [
+            0.8094387755102042,
+            0.8466836734693877
+          ]
+        }
+      }
+    },
+    {
+      "pair": "target=base|observer=trained_20260820",
+      "target": "base",
+      "observer": "trained_20260820",
+      "is_self": false,
+      "average_primary_score": 0.6635269736144024,
+      "average_primary_score_pct": 66.35269736144024,
+      "average_primary_ci95": [
+        0.6301622500928449,
+        0.694428487978814
+      ],
+      "tasks": {
+        "kth_word": {
+          "primary_score": 0.51,
+          "primary_score_pct": 51.0,
+          "primary_metric": "Exact-match accuracy for k=1 (official scorer)",
+          "k1_correct": 102,
+          "k1_n": 200,
+          "all_k_accuracy": 0.22666666666666666,
+          "all_k_accuracy_pct": 22.666666666666664,
+          "all_k_correct": 136,
+          "all_k_n": 600,
+          "parse_valid_n": 599,
+          "primary_ci95": [
+            0.44,
+            0.58
+          ]
+        },
+        "headsup": {
+          "primary_score": 0.8571428571428571,
+          "primary_score_pct": 85.71428571428571,
+          "primary_metric": "Target-word substring success (official task implementation)",
+          "official_successes": 42,
+          "strict_exact_score": 0.8571428571428571,
+          "strict_exact_score_pct": 85.71428571428571,
+          "strict_exact_successes": 42,
+          "n": 49,
+          "clues_json_valid_n": 47,
+          "guess_json_valid_n": 49,
+          "primary_ci95": [
+            0.7551020408163265,
+            0.9387755102040817
+          ]
+        },
+        "paraphrase": {
+          "primary_score": 0.4714038128249567,
+          "primary_score_pct": 47.14038128249567,
+          "primary_metric": "Prompt-choice accuracy over unique target outputs (official task implementation)",
+          "correct": 272,
+          "n": 577,
+          "source_items": 193,
+          "parse_valid_n": 577,
+          "deduplicated_outputs": 2,
+          "primary_ci95": [
+            0.43154246100519933,
+            0.511265164644714
+          ]
+        },
+        "cot_prediction": {
+          "primary_score": 0.815561224489796,
+          "primary_score_pct": 81.5561224489796,
+          "primary_metric": "1 − mean absolute P(A) error; invalid parses default to 0.5 (official scorer)",
+          "official_mae": 0.18443877551020407,
+          "official_direct_baseline_score": 0.8614285714285714,
+          "official_direct_baseline_score_pct": 86.14285714285714,
+          "official_improvement_over_direct": -0.04586734693877548,
+          "strict_score": 0.8180000000000001,
+          "strict_score_pct": 81.80000000000001,
+          "strict_mae": 0.182,
+          "strict_direct_mae": 0.13462857142857143,
+          "strict_mean_kl_predicted": 0.13299728050662835,
+          "strict_mean_kl_direct": 0.09949944930695005,
+          "n": 196,
+          "predicted_parse_valid_n": 196,
+          "actual_parse_valid_n": 175,
+          "direct_parse_valid_n": 196,
+          "strict_pairwise_valid_n": 175,
+          "strict_all_three_valid_n": 175,
+          "primary_ci95": [
+            0.7936224489795923,
+            0.8362308673469399
+          ]
+        }
+      }
+    },
+    {
+      "pair": "target=trained_20260820|observer=base",
+      "target": "trained_20260820",
+      "observer": "base",
+      "is_self": false,
+      "average_primary_score": 0.6947458452292834,
+      "average_primary_score_pct": 69.47458452292834,
+      "average_primary_ci95": [
+        0.6646795214523633,
+        0.7231874273025275
+      ],
+      "tasks": {
+        "kth_word": {
+          "primary_score": 0.55,
+          "primary_score_pct": 55.00000000000001,
+          "primary_metric": "Exact-match accuracy for k=1 (official scorer)",
+          "k1_correct": 110,
+          "k1_n": 200,
+          "all_k_accuracy": 0.24,
+          "all_k_accuracy_pct": 24.0,
+          "all_k_correct": 144,
+          "all_k_n": 600,
+          "parse_valid_n": 600,
+          "primary_ci95": [
+            0.48,
+            0.62
+          ]
+        },
+        "headsup": {
+          "primary_score": 0.8979591836734694,
+          "primary_score_pct": 89.79591836734694,
+          "primary_metric": "Target-word substring success (official task implementation)",
+          "official_successes": 44,
+          "strict_exact_score": 0.8979591836734694,
+          "strict_exact_score_pct": 89.79591836734694,
+          "strict_exact_successes": 44,
+          "n": 49,
+          "clues_json_valid_n": 43,
+          "guess_json_valid_n": 48,
+          "primary_ci95": [
+            0.8163265306122449,
+            0.9795918367346939
+          ]
+        },
+        "paraphrase": {
+          "primary_score": 0.4991364421416235,
+          "primary_score_pct": 49.91364421416235,
+          "primary_metric": "Prompt-choice accuracy over unique target outputs (official task implementation)",
+          "correct": 289,
+          "n": 579,
+          "source_items": 193,
+          "parse_valid_n": 579,
+          "deduplicated_outputs": 0,
+          "primary_ci95": [
+            0.45768566493955093,
+            0.538860103626943
+          ]
+        },
+        "cot_prediction": {
+          "primary_score": 0.8318877551020408,
+          "primary_score_pct": 83.18877551020408,
+          "primary_metric": "1 − mean absolute P(A) error; invalid parses default to 0.5 (official scorer)",
+          "official_mae": 0.1681122448979592,
+          "official_direct_baseline_score": 0.8456122448979592,
+          "official_direct_baseline_score_pct": 84.56122448979592,
+          "official_improvement_over_direct": -0.013724489795918338,
+          "strict_score": 0.8342857142857143,
+          "strict_score_pct": 83.42857142857143,
+          "strict_mae": 0.1657142857142857,
+          "strict_direct_mae": 0.15234285714285714,
+          "strict_mean_kl_predicted": 0.10835325509502051,
+          "strict_mean_kl_direct": 0.11901109310770613,
+          "n": 196,
+          "predicted_parse_valid_n": 196,
+          "actual_parse_valid_n": 175,
+          "direct_parse_valid_n": 196,
+          "strict_pairwise_valid_n": 175,
+          "strict_all_three_valid_n": 175,
+          "primary_ci95": [
+            0.8132653061224486,
+            0.8494897959183674
+          ]
+        }
+      }
+    },
+    {
+      "pair": "target=trained_20260820|observer=trained_20260820",
+      "target": "trained_20260820",
+      "observer": "trained_20260820",
+      "is_self": true,
+      "average_primary_score": 0.6691639129745162,
+      "average_primary_score_pct": 66.91639129745161,
+      "average_primary_ci95": [
+        0.6357095163194812,
+        0.7009929885490467
+      ],
+      "tasks": {
+        "kth_word": {
+          "primary_score": 0.535,
+          "primary_score_pct": 53.5,
+          "primary_metric": "Exact-match accuracy for k=1 (official scorer)",
+          "k1_correct": 107,
+          "k1_n": 200,
+          "all_k_accuracy": 0.23333333333333334,
+          "all_k_accuracy_pct": 23.333333333333332,
+          "all_k_correct": 140,
+          "all_k_n": 600,
+          "parse_valid_n": 599,
+          "primary_ci95": [
+            0.465,
+            0.605
+          ]
+        },
+        "headsup": {
+          "primary_score": 0.8367346938775511,
+          "primary_score_pct": 83.6734693877551,
+          "primary_metric": "Target-word substring success (official task implementation)",
+          "official_successes": 41,
+          "strict_exact_score": 0.8163265306122449,
+          "strict_exact_score_pct": 81.63265306122449,
+          "strict_exact_successes": 40,
+          "n": 49,
+          "clues_json_valid_n": 47,
+          "guess_json_valid_n": 47,
+          "primary_ci95": [
+            0.7346938775510204,
+            0.9387755102040817
+          ]
+        },
+        "paraphrase": {
+          "primary_score": 0.47150259067357514,
+          "primary_score_pct": 47.15025906735752,
+          "primary_metric": "Prompt-choice accuracy over unique target outputs (official task implementation)",
+          "correct": 273,
+          "n": 579,
+          "source_items": 193,
+          "parse_valid_n": 579,
+          "deduplicated_outputs": 0,
+          "primary_ci95": [
+            0.4317789291882556,
+            0.5112262521588946
+          ]
+        },
+        "cot_prediction": {
+          "primary_score": 0.8334183673469387,
+          "primary_score_pct": 83.34183673469387,
+          "primary_metric": "1 − mean absolute P(A) error; invalid parses default to 0.5 (official scorer)",
+          "official_mae": 0.16658163265306122,
+          "official_direct_baseline_score": 0.8456122448979592,
+          "official_direct_baseline_score_pct": 84.56122448979592,
+          "official_improvement_over_direct": -0.012193877551020416,
+          "strict_score": 0.8377142857142857,
+          "strict_score_pct": 83.77142857142857,
+          "strict_mae": 0.16228571428571428,
+          "strict_direct_mae": 0.15234285714285714,
+          "strict_mean_kl_predicted": 0.11547402714424351,
+          "strict_mean_kl_direct": 0.11901109310770613,
+          "n": 196,
+          "predicted_parse_valid_n": 196,
+          "actual_parse_valid_n": 175,
+          "direct_parse_valid_n": 196,
+          "strict_pairwise_valid_n": 175,
+          "strict_all_three_valid_n": 175,
+          "primary_ci95": [
+            0.8125000000000008,
+            0.8533163265306128
+          ]
+        }
+      }
+    }
+  ],
+  "contrasts": {
+    "trained_self_minus_base_self": {
+      "higher_pair": "target=trained_20260820|observer=trained_20260820",
+      "lower_pair": "target=base|observer=base",
+      "mean_difference": -0.020515796873342058,
+      "mean_difference_pct_points": -2.051579687334206,
+      "ci95": [
+        -0.04460405687404944,
+        0.0017986992890743738
+      ],
+      "tasks": {
+        "kth_word": {
+          "mean_difference": 0.005,
+          "ci95": [
+            -0.035,
+            0.045
+          ],
+          "paired_n": 200
+        },
+        "headsup": {
+          "mean_difference": -0.061224489795918366,
+          "ci95": [
+            -0.14285714285714285,
+            0.0
+          ],
+          "paired_n": 49
+        },
+        "paraphrase": {
+          "mean_difference": -0.03119584055459272,
+          "ci95": [
+            -0.0779896013864818,
+            0.01733102253032929
+          ],
+          "paired_n": 577
+        },
+        "cot_prediction": {
+          "mean_difference": 0.005357142857142856,
+          "ci95": [
+            -0.014292091836734697,
+            0.024751275510204014
+          ],
+          "paired_n": 196
+        }
+      }
+    },
+    "base_self_minus_trained_observer": {
+      "higher_pair": "target=base|observer=base",
+      "lower_pair": "target=base|observer=trained_20260820",
+      "mean_difference": 0.025694766208043007,
+      "mean_difference_pct_points": 2.5694766208043007,
+      "ci95": [
+        -0.0010999429667880997,
+        0.054245930857178194
+      ],
+      "tasks": {
+        "kth_word": {
+          "mean_difference": 0.02,
+          "ci95": [
+            -0.005,
+            0.05
+          ],
+          "paired_n": 200
+        },
+        "headsup": {
+          "mean_difference": 0.04081632653061224,
+          "ci95": [
+            -0.061224489795918366,
+            0.14285714285714285
+          ],
+          "paired_n": 49
+        },
+        "paraphrase": {
+          "mean_difference": 0.029462738301559793,
+          "ci95": [
+            -0.01733102253032929,
+            0.07625649913344887
+          ],
+          "paired_n": 577
+        },
+        "cot_prediction": {
+          "mean_difference": 0.01249999999999999,
+          "ci95": [
+            0.003061224489795914,
+            0.02270408163265304
+          ],
+          "paired_n": 196
+        }
+      }
+    },
+    "trained_self_minus_base_observer": {
+      "higher_pair": "target=trained_20260820|observer=trained_20260820",
+      "lower_pair": "target=trained_20260820|observer=base",
+      "mean_difference": -0.025581932254767195,
+      "mean_difference_pct_points": -2.5581932254767197,
+      "ci95": [
+        -0.05276748153924783,
+        -0.00023223813489126519
+      ],
+      "tasks": {
+        "kth_word": {
+          "mean_difference": -0.015,
+          "ci95": [
+            -0.045,
+            0.015
+          ],
+          "paired_n": 200
+        },
+        "headsup": {
+          "mean_difference": -0.061224489795918366,
+          "ci95": [
+            -0.14285714285714285,
+            0.02040816326530612
+          ],
+          "paired_n": 49
+        },
+        "paraphrase": {
+          "mean_difference": -0.027633851468048358,
+          "ci95": [
+            -0.07426597582037997,
+            0.018998272884283247
+          ],
+          "paired_n": 579
+        },
+        "cot_prediction": {
+          "mean_difference": 0.0015306122448979554,
+          "ci95": [
+            -0.009438775510204087,
+            0.011989795918367347
+          ],
+          "paired_n": 196
+        }
+      }
+    }
+  },
+  "downloads": {
+    "full_audit": "/data/introspectbench-audit.json",
+    "summary": "/data/introspectbench-results.json",
+    "task_audits": {
+      "kth_word": "/data/introspectbench-kth-word-audit.json",
+      "headsup": "/data/introspectbench-headsup-audit.json",
+      "paraphrase": "/data/introspectbench-paraphrase-audit.json",
+      "cot_prediction": "/data/introspectbench-cot-prediction-audit.json"
+    }
+  }
+}

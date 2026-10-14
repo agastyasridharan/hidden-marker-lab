@@ -1,0 +1,5347 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "title": "Causal paths for arbitrary hidden-marker reporting",
+  "model_id": "Qwen/Qwen3-14B",
+  "n_adapters": 3,
+  "episodes_per_adapter": 32,
+  "trials_per_adapter": 128,
+  "total_primary_trials": 384,
+  "provenance": [
+    {
+      "model_condition": "seed-20260820",
+      "adapter_sha256": "e76c866dcc822bd4a72892ccdbd2a1aa212804ac9e43fa8c689849062c0d62b6",
+      "evaluation_seed": 20260850,
+      "episodes": 32,
+      "orbit": 2,
+      "n_primary_trials": 128,
+      "gpu": "NVIDIA H100 NVL",
+      "torch": "2.12.0+cu130",
+      "python": "3.13.13",
+      "protocol": {
+        "injection": "block 20 resid_pre at the final period, rho=0.1",
+        "candidate_origin": "head 22.17 and the six-head group were fixed by the earlier Experiment 4 discovery split",
+        "confirmation": "new episode seed; all presentation transforms and both test directions remain counterbalanced",
+        "stage_order": [
+          "K/V causal transport",
+          "binding and matching patching",
+          "low-rank fingerprint geometry",
+          "direct versus relay attention paths"
+        ]
+      }
+    },
+    {
+      "model_condition": "seed-20260821",
+      "adapter_sha256": "9d24e75d8816d5f09c198834ae95a5c82e849f46325b79af55058f5db4018b60",
+      "evaluation_seed": 20260851,
+      "episodes": 32,
+      "orbit": 2,
+      "n_primary_trials": 128,
+      "gpu": "NVIDIA H100 NVL",
+      "torch": "2.12.0+cu130",
+      "python": "3.13.13",
+      "protocol": {
+        "injection": "block 20 resid_pre at the final period, rho=0.1",
+        "candidate_origin": "head 22.17 and the six-head group were fixed by the earlier Experiment 4 discovery split",
+        "confirmation": "new episode seed; all presentation transforms and both test directions remain counterbalanced",
+        "stage_order": [
+          "K/V causal transport",
+          "binding and matching patching",
+          "low-rank fingerprint geometry",
+          "direct versus relay attention paths"
+        ]
+      }
+    },
+    {
+      "model_condition": "seed-20260822",
+      "adapter_sha256": "e1a412e0ca45e45c432f04de3276dd119aebfdd7f07a380a1f2b882a70464702",
+      "evaluation_seed": 20260852,
+      "episodes": 32,
+      "orbit": 2,
+      "n_primary_trials": 128,
+      "gpu": "NVIDIA H100 NVL",
+      "torch": "2.12.0+cu130",
+      "python": "3.13.13",
+      "protocol": {
+        "injection": "block 20 resid_pre at the final period, rho=0.1",
+        "candidate_origin": "head 22.17 and the six-head group were fixed by the earlier Experiment 4 discovery split",
+        "confirmation": "new episode seed; all presentation transforms and both test directions remain counterbalanced",
+        "stage_order": [
+          "K/V causal transport",
+          "binding and matching patching",
+          "low-rank fingerprint geometry",
+          "direct versus relay attention paths"
+        ]
+      }
+    }
+  ],
+  "protocol": {
+    "injection": "block 20 resid_pre at the final period, rho=0.1",
+    "candidate_origin": "head 22.17 and the six-head group were fixed by the earlier Experiment 4 discovery split",
+    "confirmation": "new episode seed; all presentation transforms and both test directions remain counterbalanced",
+    "stage_order": [
+      "K/V causal transport",
+      "binding and matching patching",
+      "low-rank fingerprint geometry",
+      "direct versus relay attention paths"
+    ]
+  },
+  "transport": {
+    "conditions": {
+      "remove:L20:k+v:H0:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9348958333333334,
+        "accuracy_drop": -0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.018229166666666668,
+          0.010416666666666666
+        ],
+        "mean_margin_drop": 0.0026041666666666665,
+        "margin_drop_ci_95_hierarchical": [
+          -0.025227864583333332,
+          0.029134114583333332
+        ],
+        "answer_flip_fraction": 0.0078125,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": -0.00390625,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.021484375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": -0.015625,
+            "mean_margin_drop": -0.009765625,
+            "answer_flip_fraction": 0.015625
+          }
+        ]
+      },
+      "remove:L20:k+v:H0:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9401041666666666,
+        "accuracy_drop": -0.0078125,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.020833333333333332,
+          0.0
+        ],
+        "mean_margin_drop": -0.009765625,
+        "margin_drop_ci_95_hierarchical": [
+          -0.031901041666666664,
+          0.012532552083333334
+        ],
+        "answer_flip_fraction": 0.0078125,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.0166015625,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.015625,
+            "mean_margin_drop": -0.009765625,
+            "answer_flip_fraction": 0.015625
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": -0.0029296875,
+            "answer_flip_fraction": 0.0078125
+          }
+        ]
+      },
+      "remove:L20:k+v:H0:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9375,
+        "accuracy_drop": -0.005208333333333333,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.020833333333333332,
+          0.010416666666666666
+        ],
+        "mean_margin_drop": 0.016764322916666668,
+        "margin_drop_ci_95_hierarchical": [
+          -0.00927734375,
+          0.04313557942708327
+        ],
+        "answer_flip_fraction": 0.015625,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.025390625,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.015625,
+            "mean_margin_drop": 0.0087890625,
+            "answer_flip_fraction": 0.015625
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.01611328125,
+            "answer_flip_fraction": 0.03125
+          }
+        ]
+      },
+      "remove:L20:k+v:H1:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9401041666666666,
+        "accuracy_drop": -0.0078125,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.0234375,
+          0.0078125
+        ],
+        "mean_margin_drop": 0.004069010416666667,
+        "margin_drop_ci_95_hierarchical": [
+          -0.02409261067708333,
+          0.031087239583333332
+        ],
+        "answer_flip_fraction": 0.013020833333333334,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": 0.0087890625,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.015625,
+            "mean_margin_drop": -0.005859375,
+            "answer_flip_fraction": 0.015625
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": -0.015625,
+            "mean_margin_drop": 0.00927734375,
+            "answer_flip_fraction": 0.015625
+          }
+        ]
+      },
+      "remove:L20:k+v:H1:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9401041666666666,
+        "accuracy_drop": -0.0078125,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.026041666666666668,
+          0.0
+        ],
+        "mean_margin_drop": 0.0,
+        "margin_drop_ci_95_hierarchical": [
+          -0.028812662760416663,
+          0.03076171875
+        ],
+        "answer_flip_fraction": 0.0078125,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.00439453125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0234375,
+            "mean_margin_drop": -0.017578125,
+            "answer_flip_fraction": 0.0234375
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.02197265625,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L20:k+v:H1:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9401041666666666,
+        "accuracy_drop": -0.0078125,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.026041666666666668,
+          0.0
+        ],
+        "mean_margin_drop": -0.00048828125,
+        "margin_drop_ci_95_hierarchical": [
+          -0.02685546875,
+          0.025553385416666668
+        ],
+        "answer_flip_fraction": 0.0078125,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0029296875,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0234375,
+            "mean_margin_drop": -0.0185546875,
+            "answer_flip_fraction": 0.0234375
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.01416015625,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L20:k+v:H2:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9348958333333334,
+        "accuracy_drop": -0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.018229166666666668,
+          0.013020833333333334
+        ],
+        "mean_margin_drop": 0.0016276041666666667,
+        "margin_drop_ci_95_hierarchical": [
+          -0.025227864583333332,
+          0.025553385416666668
+        ],
+        "answer_flip_fraction": 0.013020833333333334,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": -0.01220703125,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0009765625,
+            "answer_flip_fraction": 0.015625
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": -0.015625,
+            "mean_margin_drop": 0.01611328125,
+            "answer_flip_fraction": 0.015625
+          }
+        ]
+      },
+      "remove:L20:k+v:H2:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9401041666666666,
+        "accuracy_drop": -0.0078125,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.020833333333333332,
+          0.0
+        ],
+        "mean_margin_drop": -0.022786458333333332,
+        "margin_drop_ci_95_hierarchical": [
+          -0.048828125,
+          0.00439453125
+        ],
+        "answer_flip_fraction": 0.0078125,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.03955078125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.015625,
+            "mean_margin_drop": -0.0166015625,
+            "answer_flip_fraction": 0.015625
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": -0.01220703125,
+            "answer_flip_fraction": 0.0078125
+          }
+        ]
+      },
+      "remove:L20:k+v:H2:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9427083333333334,
+        "accuracy_drop": -0.010416666666666666,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.033854166666666664,
+          0.0078125
+        ],
+        "mean_margin_drop": -0.01513671875,
+        "margin_drop_ci_95_hierarchical": [
+          -0.05908203125,
+          0.02913818359374994
+        ],
+        "answer_flip_fraction": 0.015625,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": -0.03271484375,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.03125,
+            "mean_margin_drop": -0.03125,
+            "answer_flip_fraction": 0.03125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.0185546875,
+            "answer_flip_fraction": 0.0078125
+          }
+        ]
+      },
+      "remove:L20:k+v:H3:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9375,
+        "accuracy_drop": -0.005208333333333333,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.015625,
+          0.0
+        ],
+        "mean_margin_drop": -0.010904947916666666,
+        "margin_drop_ci_95_hierarchical": [
+          -0.040201822916666664,
+          0.01708984375
+        ],
+        "answer_flip_fraction": 0.005208333333333333,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.03173828125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.0068359375,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": -0.0078125,
+            "answer_flip_fraction": 0.0078125
+          }
+        ]
+      },
+      "remove:L20:k+v:H3:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9348958333333334,
+        "accuracy_drop": -0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.010416666666666666,
+          0.0
+        ],
+        "mean_margin_drop": -0.02490234375,
+        "margin_drop_ci_95_hierarchical": [
+          -0.05224609375,
+          0.0006510416666666666
+        ],
+        "answer_flip_fraction": 0.0026041666666666665,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.04443359375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.0185546875,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": -0.01171875,
+            "answer_flip_fraction": 0.0078125
+          }
+        ]
+      },
+      "remove:L20:k+v:H3:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9348958333333334,
+        "accuracy_drop": -0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.015625,
+          0.010416666666666666
+        ],
+        "mean_margin_drop": -0.013997395833333334,
+        "margin_drop_ci_95_hierarchical": [
+          -0.0361328125,
+          0.008626302083333334
+        ],
+        "answer_flip_fraction": 0.0078125,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": -0.00830078125,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": -0.02734375,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": -0.00634765625,
+            "answer_flip_fraction": 0.0078125
+          }
+        ]
+      },
+      "remove:L20:k+v:H4:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9348958333333334,
+        "accuracy_drop": -0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.010416666666666666,
+          0.0
+        ],
+        "mean_margin_drop": -0.010579427083333334,
+        "margin_drop_ci_95_hierarchical": [
+          -0.039388020833333336,
+          0.016276041666666668
+        ],
+        "answer_flip_fraction": 0.0026041666666666665,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.0048828125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.00390625,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": -0.03076171875,
+            "answer_flip_fraction": 0.0078125
+          }
+        ]
+      },
+      "remove:L20:k+v:H4:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9375,
+        "accuracy_drop": -0.005208333333333333,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.015625,
+          0.0
+        ],
+        "mean_margin_drop": 0.004231770833333333,
+        "margin_drop_ci_95_hierarchical": [
+          -0.025390625,
+          0.034342447916666664
+        ],
+        "answer_flip_fraction": 0.005208333333333333,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.02001953125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.0234375,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.00927734375,
+            "answer_flip_fraction": 0.0078125
+          }
+        ]
+      },
+      "remove:L20:k+v:H4:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9348958333333334,
+        "accuracy_drop": -0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.010416666666666666,
+          0.0
+        ],
+        "mean_margin_drop": -0.005859375,
+        "margin_drop_ci_95_hierarchical": [
+          -0.02783203125,
+          0.017252604166666668
+        ],
+        "answer_flip_fraction": 0.0026041666666666665,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.0205078125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": -0.0009765625,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.00390625,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L20:k+v:H5:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.8723958333333334,
+        "accuracy_drop": 0.059895833333333336,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.028645833333333332,
+          0.1015625
+        ],
+        "mean_margin_drop": 0.9513346354166666,
+        "margin_drop_ci_95_hierarchical": [
+          0.755859375,
+          1.1158894856770833
+        ],
+        "answer_flip_fraction": 0.06510416666666667,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.09375,
+            "mean_margin_drop": 1.0654296875,
+            "answer_flip_fraction": 0.09375
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.046875,
+            "mean_margin_drop": 0.7392578125,
+            "answer_flip_fraction": 0.046875
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0390625,
+            "mean_margin_drop": 1.04931640625,
+            "answer_flip_fraction": 0.0546875
+          }
+        ]
+      },
+      "remove:L20:k+v:H5:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.8645833333333334,
+        "accuracy_drop": 0.06770833333333333,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.020833333333333332,
+          0.11458333333333333
+        ],
+        "mean_margin_drop": 1.41357421875,
+        "margin_drop_ci_95_hierarchical": [
+          1.0768229166666667,
+          1.6614583333333333
+        ],
+        "answer_flip_fraction": 0.07291666666666667,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.078125,
+            "mean_margin_drop": 1.5576171875,
+            "answer_flip_fraction": 0.078125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0234375,
+            "mean_margin_drop": 1.06640625,
+            "answer_flip_fraction": 0.0390625
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.1015625,
+            "mean_margin_drop": 1.61669921875,
+            "answer_flip_fraction": 0.1015625
+          }
+        ]
+      },
+      "remove:L20:k+v:H5:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.7916666666666666,
+        "accuracy_drop": 0.140625,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.08333333333333333,
+          0.19270833333333334
+        ],
+        "mean_margin_drop": 2.4033203125,
+        "margin_drop_ci_95_hierarchical": [
+          1.8356038411458333,
+          2.8310587565104166
+        ],
+        "answer_flip_fraction": 0.14583333333333334,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.1875,
+            "mean_margin_drop": 2.81103515625,
+            "answer_flip_fraction": 0.1875
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0859375,
+            "mean_margin_drop": 1.8203125,
+            "answer_flip_fraction": 0.1015625
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.1484375,
+            "mean_margin_drop": 2.57861328125,
+            "answer_flip_fraction": 0.1484375
+          }
+        ]
+      },
+      "remove:L20:k+v:H6:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9401041666666666,
+        "accuracy_drop": -0.0078125,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.020833333333333332,
+          0.0
+        ],
+        "mean_margin_drop": -0.006184895833333333,
+        "margin_drop_ci_95_hierarchical": [
+          -0.043782552083333336,
+          0.029134114583333332
+        ],
+        "answer_flip_fraction": 0.0078125,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.04248046875,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.015625,
+            "mean_margin_drop": 0.005859375,
+            "answer_flip_fraction": 0.015625
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.01806640625,
+            "answer_flip_fraction": 0.0078125
+          }
+        ]
+      },
+      "remove:L20:k+v:H6:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9375,
+        "accuracy_drop": -0.005208333333333333,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.015625,
+          0.0
+        ],
+        "mean_margin_drop": -0.007649739583333333,
+        "margin_drop_ci_95_hierarchical": [
+          -0.0380859375,
+          0.02099609375
+        ],
+        "answer_flip_fraction": 0.005208333333333333,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.02978515625,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": -0.00390625,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.0107421875,
+            "answer_flip_fraction": 0.0078125
+          }
+        ]
+      },
+      "remove:L20:k+v:H6:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9401041666666666,
+        "accuracy_drop": -0.0078125,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.020833333333333332,
+          0.0
+        ],
+        "mean_margin_drop": 0.0003255208333333333,
+        "margin_drop_ci_95_hierarchical": [
+          -0.027994791666666668,
+          0.028645833333333332
+        ],
+        "answer_flip_fraction": 0.0078125,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0185546875,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.015625,
+            "mean_margin_drop": -0.01953125,
+            "answer_flip_fraction": 0.015625
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.001953125,
+            "answer_flip_fraction": 0.0078125
+          }
+        ]
+      },
+      "remove:L20:k+v:H7:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9348958333333334,
+        "accuracy_drop": -0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.015625,
+          0.010416666666666666
+        ],
+        "mean_margin_drop": 0.0027669270833333335,
+        "margin_drop_ci_95_hierarchical": [
+          -0.030924479166666668,
+          0.0380859375
+        ],
+        "answer_flip_fraction": 0.0078125,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": -0.025390625,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.033203125,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.00048828125,
+            "answer_flip_fraction": 0.0078125
+          }
+        ]
+      },
+      "remove:L20:k+v:H7:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9375,
+        "accuracy_drop": -0.005208333333333333,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.020833333333333332,
+          0.0078125
+        ],
+        "mean_margin_drop": 0.012858072916666666,
+        "margin_drop_ci_95_hierarchical": [
+          -0.0146484375,
+          0.0419921875
+        ],
+        "answer_flip_fraction": 0.010416666666666666,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": -0.0078125,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.015625,
+            "mean_margin_drop": 0.02734375,
+            "answer_flip_fraction": 0.015625
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.01904296875,
+            "answer_flip_fraction": 0.0078125
+          }
+        ]
+      },
+      "remove:L20:k+v:H7:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.010416666666666666,
+          0.010416666666666666
+        ],
+        "mean_margin_drop": -0.0068359375,
+        "margin_drop_ci_95_hierarchical": [
+          -0.03173828125,
+          0.017582194010416607
+        ],
+        "answer_flip_fraction": 0.005208333333333333,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": -0.01953125,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": -0.0087890625,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0078125,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k+v:H0:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9348958333333334,
+        "accuracy_drop": -0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.010416666666666666,
+          0.0
+        ],
+        "mean_margin_drop": 0.0035807291666666665,
+        "margin_drop_ci_95_hierarchical": [
+          -0.007486979166666667,
+          0.014811197916666666
+        ],
+        "answer_flip_fraction": 0.0026041666666666665,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.01220703125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": -0.0048828125,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.00341796875,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k+v:H0:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.011393229166666666,
+        "margin_drop_ci_95_hierarchical": [
+          0.0027669270833333335,
+          0.020833333333333332
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0107421875,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0146484375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0087890625,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k+v:H0:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.004720052083333333,
+        "margin_drop_ci_95_hierarchical": [
+          -0.0087890625,
+          0.015791829427083275
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0126953125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.0068359375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.00830078125,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k+v:H1:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.006184895833333333,
+        "margin_drop_ci_95_hierarchical": [
+          -0.009602864583333334,
+          0.022623697916666668
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0234375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.001953125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.0068359375,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k+v:H1:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9348958333333334,
+        "accuracy_drop": -0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.010416666666666666,
+          0.0
+        ],
+        "mean_margin_drop": 0.009114583333333334,
+        "margin_drop_ci_95_hierarchical": [
+          0.0017903645833333333,
+          0.0166015625
+        ],
+        "answer_flip_fraction": 0.0026041666666666665,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.00927734375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.0107421875,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.00732421875,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k+v:H1:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9348958333333334,
+        "accuracy_drop": -0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.010416666666666666,
+          0.0
+        ],
+        "mean_margin_drop": 0.0035807291666666665,
+        "margin_drop_ci_95_hierarchical": [
+          -0.007975260416666666,
+          0.01318359375
+        ],
+        "answer_flip_fraction": 0.0026041666666666665,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.00927734375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": -0.0048828125,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.00634765625,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k+v:H2:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.007975260416666666,
+        "margin_drop_ci_95_hierarchical": [
+          -0.0006510416666666666,
+          0.01611328125
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.01025390625,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0087890625,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0048828125,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k+v:H2:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9348958333333334,
+        "accuracy_drop": -0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.010416666666666666,
+          0.0
+        ],
+        "mean_margin_drop": 0.00537109375,
+        "margin_drop_ci_95_hierarchical": [
+          -0.005859375,
+          0.016276041666666668
+        ],
+        "answer_flip_fraction": 0.0026041666666666665,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0146484375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": -0.0009765625,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.00244140625,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k+v:H2:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.006510416666666667,
+        "margin_drop_ci_95_hierarchical": [
+          -0.00634765625,
+          0.01806640625
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.01611328125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0087890625,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.00537109375,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k+v:H3:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.8567708333333334,
+        "accuracy_drop": 0.07552083333333333,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.036458333333333336,
+          0.12239583333333333
+        ],
+        "mean_margin_drop": 1.37109375,
+        "margin_drop_ci_95_hierarchical": [
+          1.18115234375,
+          1.6217692057291664
+        ],
+        "answer_flip_fraction": 0.08072916666666667,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.1171875,
+            "mean_margin_drop": 1.6416015625,
+            "answer_flip_fraction": 0.1171875
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0625,
+            "mean_margin_drop": 1.2626953125,
+            "answer_flip_fraction": 0.0625
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.046875,
+            "mean_margin_drop": 1.208984375,
+            "answer_flip_fraction": 0.0625
+          }
+        ]
+      },
+      "remove:L22:k+v:H3:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.78125,
+        "accuracy_drop": 0.15104166666666666,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.09375,
+          0.20572916666666666
+        ],
+        "mean_margin_drop": 2.435546875,
+        "margin_drop_ci_95_hierarchical": [
+          2.163720703125,
+          2.687019856770833
+        ],
+        "answer_flip_fraction": 0.16145833333333334,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.171875,
+            "mean_margin_drop": 2.63037109375,
+            "answer_flip_fraction": 0.171875
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.09375,
+            "mean_margin_drop": 2.158203125,
+            "answer_flip_fraction": 0.125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.1875,
+            "mean_margin_drop": 2.51806640625,
+            "answer_flip_fraction": 0.1875
+          }
+        ]
+      },
+      "remove:L22:k+v:H3:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.016927083333333332,
+        "margin_drop_ci_95_hierarchical": [
+          0.007975260416666666,
+          0.025716145833333332
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0185546875,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0166015625,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.015625,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k+v:H4:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9140625,
+        "accuracy_drop": 0.018229166666666668,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.036458333333333336
+        ],
+        "mean_margin_drop": 0.248046875,
+        "margin_drop_ci_95_hierarchical": [
+          0.19352213541666666,
+          0.2965535481770833
+        ],
+        "answer_flip_fraction": 0.0234375,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.03125,
+            "mean_margin_drop": 0.1982421875,
+            "answer_flip_fraction": 0.03125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.015625,
+            "mean_margin_drop": 0.296875,
+            "answer_flip_fraction": 0.015625
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": 0.2490234375,
+            "answer_flip_fraction": 0.0234375
+          }
+        ]
+      },
+      "remove:L22:k+v:H4:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9192708333333334,
+        "accuracy_drop": 0.013020833333333334,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0026041666666666665,
+          0.028645833333333332
+        ],
+        "mean_margin_drop": 0.2955729166666667,
+        "margin_drop_ci_95_hierarchical": [
+          0.2109375,
+          0.3606770833333333
+        ],
+        "answer_flip_fraction": 0.013020833333333334,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.015625,
+            "mean_margin_drop": 0.20703125,
+            "answer_flip_fraction": 0.015625
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": 0.3271484375,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.015625,
+            "mean_margin_drop": 0.3525390625,
+            "answer_flip_fraction": 0.015625
+          }
+        ]
+      },
+      "remove:L22:k+v:H4:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9348958333333334,
+        "accuracy_drop": -0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.010416666666666666,
+          0.0
+        ],
+        "mean_margin_drop": 0.0016276041666666667,
+        "margin_drop_ci_95_hierarchical": [
+          -0.008463541666666666,
+          0.011067708333333334
+        ],
+        "answer_flip_fraction": 0.0026041666666666665,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.00537109375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.0048828125,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.00537109375,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k+v:H5:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.006673177083333333,
+        "margin_drop_ci_95_hierarchical": [
+          -0.0021199544270833295,
+          0.015625
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0087890625,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0107421875,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.00048828125,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k+v:H5:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.007975260416666666,
+        "margin_drop_ci_95_hierarchical": [
+          -0.0013020833333333333,
+          0.017252604166666668
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0146484375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.005859375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.00341796875,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k+v:H5:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9348958333333334,
+        "accuracy_drop": -0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.010416666666666666,
+          0.0
+        ],
+        "mean_margin_drop": 0.006673177083333333,
+        "margin_drop_ci_95_hierarchical": [
+          -0.005045572916666667,
+          0.016927083333333332
+        ],
+        "answer_flip_fraction": 0.0026041666666666665,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.01513671875,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.0078125,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.0029296875,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k+v:H6:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.011067708333333334,
+        "margin_drop_ci_95_hierarchical": [
+          -0.0003255208333333333,
+          0.02197265625
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.017578125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0146484375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0009765625,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k+v:H6:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.008951822916666666,
+        "margin_drop_ci_95_hierarchical": [
+          0.0,
+          0.017578125
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0146484375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0048828125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.00732421875,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k+v:H6:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.009440104166666666,
+        "margin_drop_ci_95_hierarchical": [
+          0.0009765625,
+          0.016927083333333332
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.01318359375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0068359375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.00830078125,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k+v:H7:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": -0.017740885416666668,
+        "margin_drop_ci_95_hierarchical": [
+          -0.027994791666666668,
+          -0.007649739583333333
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.009765625,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.0244140625,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.01904296875,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k+v:H7:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": -0.033528645833333336,
+        "margin_drop_ci_95_hierarchical": [
+          -0.06901041666666667,
+          -0.006184895833333333
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.0068359375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.021484375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.072265625,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k+v:H7:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": -0.00634765625,
+        "margin_drop_ci_95_hierarchical": [
+          -0.037109375,
+          0.01513671875
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.01318359375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.0400390625,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0078125,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k:H3:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.8567708333333334,
+        "accuracy_drop": 0.07552083333333333,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.036458333333333336,
+          0.12239583333333333
+        ],
+        "mean_margin_drop": 1.3668619791666667,
+        "margin_drop_ci_95_hierarchical": [
+          1.1754516601562501,
+          1.61474609375
+        ],
+        "answer_flip_fraction": 0.08072916666666667,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.1171875,
+            "mean_margin_drop": 1.63232421875,
+            "answer_flip_fraction": 0.1171875
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0625,
+            "mean_margin_drop": 1.275390625,
+            "answer_flip_fraction": 0.0625
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.046875,
+            "mean_margin_drop": 1.19287109375,
+            "answer_flip_fraction": 0.0625
+          }
+        ]
+      },
+      "remove:L22:v:H3:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.0166015625,
+        "margin_drop_ci_95_hierarchical": [
+          0.00146484375,
+          0.030436197916666668
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.02392578125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0244140625,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.00146484375,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k:H3:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.78125,
+        "accuracy_drop": 0.15104166666666666,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.09114583333333333,
+          0.20572916666666666
+        ],
+        "mean_margin_drop": 2.4300130208333335,
+        "margin_drop_ci_95_hierarchical": [
+          2.1549479166666665,
+          2.67708740234375
+        ],
+        "answer_flip_fraction": 0.16145833333333334,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.171875,
+            "mean_margin_drop": 2.6240234375,
+            "answer_flip_fraction": 0.171875
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.09375,
+            "mean_margin_drop": 2.1513671875,
+            "answer_flip_fraction": 0.125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.1875,
+            "mean_margin_drop": 2.5146484375,
+            "answer_flip_fraction": 0.1875
+          }
+        ]
+      },
+      "remove:L22:v:H3:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.010416666666666666,
+          0.010416666666666666
+        ],
+        "mean_margin_drop": 0.022786458333333332,
+        "margin_drop_ci_95_hierarchical": [
+          0.0126953125,
+          0.033854166666666664
+        ],
+        "answer_flip_fraction": 0.005208333333333333,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": 0.017578125,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.0263671875,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0244140625,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k:H3:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.021321614583333332,
+        "margin_drop_ci_95_hierarchical": [
+          0.009928385416666666,
+          0.032389322916666664
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0224609375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0126953125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.02880859375,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:v:H3:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.005696614583333333,
+        "margin_drop_ci_95_hierarchical": [
+          -0.005208333333333333,
+          0.0166015625
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0107421875,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0087890625,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.00244140625,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k:H4:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9114583333333334,
+        "accuracy_drop": 0.020833333333333332,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0026041666666666665,
+          0.0390625
+        ],
+        "mean_margin_drop": 0.24495442708333334,
+        "margin_drop_ci_95_hierarchical": [
+          0.1953125,
+          0.2858072916666667
+        ],
+        "answer_flip_fraction": 0.026041666666666668,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.03125,
+            "mean_margin_drop": 0.19921875,
+            "answer_flip_fraction": 0.03125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0234375,
+            "mean_margin_drop": 0.283203125,
+            "answer_flip_fraction": 0.0234375
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": 0.25244140625,
+            "answer_flip_fraction": 0.0234375
+          }
+        ]
+      },
+      "remove:L22:v:H4:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.0068359375,
+        "margin_drop_ci_95_hierarchical": [
+          -0.004557291666666667,
+          0.017252604166666668
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0126953125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.001953125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.009765625,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k:H4:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9192708333333334,
+        "accuracy_drop": 0.013020833333333334,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0026041666666666665,
+          0.028645833333333332
+        ],
+        "mean_margin_drop": 0.2936197916666667,
+        "margin_drop_ci_95_hierarchical": [
+          0.21126302083333334,
+          0.3595377604166667
+        ],
+        "answer_flip_fraction": 0.013020833333333334,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.015625,
+            "mean_margin_drop": 0.203125,
+            "answer_flip_fraction": 0.015625
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": 0.3291015625,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.015625,
+            "mean_margin_drop": 0.3486328125,
+            "answer_flip_fraction": 0.015625
+          }
+        ]
+      },
+      "remove:L22:v:H4:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.00927734375,
+        "margin_drop_ci_95_hierarchical": [
+          0.0006510416666666666,
+          0.017903645833333332
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0146484375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0078125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.00537109375,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:k:H4:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.008951822916666666,
+        "margin_drop_ci_95_hierarchical": [
+          -0.001953125,
+          0.01953125
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.01220703125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.013671875,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0009765625,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L22:v:H4:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9348958333333334,
+        "accuracy_drop": -0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.010416666666666666,
+          0.0
+        ],
+        "mean_margin_drop": 0.004231770833333333,
+        "margin_drop_ci_95_hierarchical": [
+          -0.007649739583333333,
+          0.015462239583333334
+        ],
+        "answer_flip_fraction": 0.0026041666666666665,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.01416015625,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.0009765625,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.00244140625,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L21:k+v:H3:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.010416666666666666,
+          0.010416666666666666
+        ],
+        "mean_margin_drop": 0.1376953125,
+        "margin_drop_ci_95_hierarchical": [
+          0.07926025390625001,
+          0.18977864583333334
+        ],
+        "answer_flip_fraction": 0.005208333333333333,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": 0.1484375,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.1875,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.0771484375,
+            "answer_flip_fraction": 0.0078125
+          }
+        ]
+      },
+      "remove:L21:k+v:H3:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9270833333333334,
+        "accuracy_drop": 0.005208333333333333,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.005208333333333333,
+          0.020833333333333332
+        ],
+        "mean_margin_drop": 0.12825520833333334,
+        "margin_drop_ci_95_hierarchical": [
+          0.10172526041666667,
+          0.15608723958333334
+        ],
+        "answer_flip_fraction": 0.010416666666666666,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": 0.11474609375,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.130859375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": 0.13916015625,
+            "answer_flip_fraction": 0.0234375
+          }
+        ]
+      },
+      "remove:L21:k+v:H3:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9296875,
+        "accuracy_drop": 0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.010416666666666666,
+          0.015625
+        ],
+        "mean_margin_drop": 0.14729817708333334,
+        "margin_drop_ci_95_hierarchical": [
+          0.10986328125,
+          0.18815104166666666
+        ],
+        "answer_flip_fraction": 0.0078125,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": 0.11962890625,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.1845703125,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": 0.1376953125,
+            "answer_flip_fraction": 0.0078125
+          }
+        ]
+      },
+      "remove:L21:k+v:H4:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9348958333333334,
+        "accuracy_drop": -0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.015625,
+          0.010416666666666666
+        ],
+        "mean_margin_drop": -0.007161458333333333,
+        "margin_drop_ci_95_hierarchical": [
+          -0.029622395833333332,
+          0.013834635416666666
+        ],
+        "answer_flip_fraction": 0.0078125,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": 0.00244140625,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": -0.009765625,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": -0.01416015625,
+            "answer_flip_fraction": 0.0078125
+          }
+        ]
+      },
+      "remove:L21:k+v:H4:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9375,
+        "accuracy_drop": -0.005208333333333333,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.015625,
+          0.0
+        ],
+        "mean_margin_drop": -0.006998697916666667,
+        "margin_drop_ci_95_hierarchical": [
+          -0.031901041666666664,
+          0.014973958333333334
+        ],
+        "answer_flip_fraction": 0.005208333333333333,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.0087890625,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": -0.0224609375,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.01025390625,
+            "answer_flip_fraction": 0.0078125
+          }
+        ]
+      },
+      "remove:L21:k+v:H4:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9375,
+        "accuracy_drop": -0.005208333333333333,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.015625,
+          0.0
+        ],
+        "mean_margin_drop": 0.01025390625,
+        "margin_drop_ci_95_hierarchical": [
+          -0.0048828125,
+          0.025065104166666668
+        ],
+        "answer_flip_fraction": 0.005208333333333333,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.00830078125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.0146484375,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.0078125,
+            "answer_flip_fraction": 0.0078125
+          }
+        ]
+      },
+      "remove:L23:k+v:H3:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.00244140625,
+        "margin_drop_ci_95_hierarchical": [
+          -0.006022135416666667,
+          0.011234537760416607
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0087890625,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.001953125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.00341796875,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L23:k+v:H3:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.0037434895833333335,
+        "margin_drop_ci_95_hierarchical": [
+          -0.009114583333333334,
+          0.017903645833333332
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.01806640625,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.0009765625,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.005859375,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L23:k+v:H3:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9348958333333334,
+        "accuracy_drop": -0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.010416666666666666,
+          0.0
+        ],
+        "mean_margin_drop": 0.00537109375,
+        "margin_drop_ci_95_hierarchical": [
+          -0.006998697916666667,
+          0.01708984375
+        ],
+        "answer_flip_fraction": 0.0026041666666666665,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.01513671875,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.005859375,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.0048828125,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L23:k+v:H4:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.005208333333333333,
+        "margin_drop_ci_95_hierarchical": [
+          -0.0035807291666666665,
+          0.014489746093749941
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.00537109375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0107421875,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.00048828125,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L23:k+v:H4:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.0048828125,
+        "margin_drop_ci_95_hierarchical": [
+          -0.00390625,
+          0.012858072916666666
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0087890625,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.001953125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.00390625,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L23:k+v:H4:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.006998697916666667,
+        "margin_drop_ci_95_hierarchical": [
+          -0.0030924479166666665,
+          0.017093912760416607
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.01513671875,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0009765625,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0048828125,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L24:k+v:H3:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.009928385416666666,
+        "margin_drop_ci_95_hierarchical": [
+          0.0008138020833333334,
+          0.0185546875
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.01513671875,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.009765625,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0048828125,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L24:k+v:H3:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.013509114583333334,
+        "margin_drop_ci_95_hierarchical": [
+          0.0022745768229166705,
+          0.026692708333333332
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.005859375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.025390625,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.00927734375,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L24:k+v:H3:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9270833333333334,
+        "accuracy_drop": 0.005208333333333333,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.015625
+        ],
+        "mean_margin_drop": 0.21988932291666666,
+        "margin_drop_ci_95_hierarchical": [
+          0.020833333333333332,
+          0.4886067708333333
+        ],
+        "answer_flip_fraction": 0.005208333333333333,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": 0.14404296875,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": 0.4970703125,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0185546875,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L24:k+v:H4:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9348958333333334,
+        "accuracy_drop": -0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.010416666666666666,
+          0.0
+        ],
+        "mean_margin_drop": 0.00390625,
+        "margin_drop_ci_95_hierarchical": [
+          -0.006184895833333333,
+          0.013509114583333334
+        ],
+        "answer_flip_fraction": 0.0026041666666666665,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0107421875,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.0029296875,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.001953125,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L24:k+v:H4:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.0022786458333333335,
+        "margin_drop_ci_95_hierarchical": [
+          -0.008463541666666666,
+          0.013509114583333334
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.01220703125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.00537109375,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L24:k+v:H4:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.00016276041666666666,
+        "margin_drop_ci_95_hierarchical": [
+          -0.01171875,
+          0.01171875
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0107421875,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.0068359375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.00341796875,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L25:k+v:H3:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9348958333333334,
+        "accuracy_drop": -0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.010416666666666666,
+          0.0
+        ],
+        "mean_margin_drop": 0.004557291666666667,
+        "margin_drop_ci_95_hierarchical": [
+          -0.0035807291666666665,
+          0.012369791666666666
+        ],
+        "answer_flip_fraction": 0.0026041666666666665,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.005859375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.0,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0078125,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L25:k+v:H3:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.005533854166666667,
+        "margin_drop_ci_95_hierarchical": [
+          -0.004557291666666667,
+          0.014973958333333334
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.01220703125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0048828125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.00048828125,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L25:k+v:H3:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9166666666666666,
+        "accuracy_drop": 0.015625,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0026041666666666665,
+          0.036458333333333336
+        ],
+        "mean_margin_drop": 0.3173828125,
+        "margin_drop_ci_95_hierarchical": [
+          0.162109375,
+          0.5872395833333334
+        ],
+        "answer_flip_fraction": 0.015625,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": 0.18505859375,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.03125,
+            "mean_margin_drop": 0.5966796875,
+            "answer_flip_fraction": 0.03125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": 0.17041015625,
+            "answer_flip_fraction": 0.0078125
+          }
+        ]
+      },
+      "remove:L25:k+v:H4:R0": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9348958333333334,
+        "accuracy_drop": -0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.010416666666666666,
+          0.0
+        ],
+        "mean_margin_drop": 0.0022786458333333335,
+        "margin_drop_ci_95_hierarchical": [
+          -0.005696614583333333,
+          0.01025390625
+        ],
+        "answer_flip_fraction": 0.0026041666666666665,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0029296875,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.0029296875,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0009765625,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L25:k+v:H4:R1": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9348958333333334,
+        "accuracy_drop": -0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.010416666666666666,
+          0.0
+        ],
+        "mean_margin_drop": 0.00390625,
+        "margin_drop_ci_95_hierarchical": [
+          -0.00602620442708333,
+          0.014322916666666666
+        ],
+        "answer_flip_fraction": 0.0026041666666666665,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0048828125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.009765625,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.0029296875,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "remove:L25:k+v:H4:R2": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9140625,
+        "accuracy_drop": 0.018229166666666668,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.049479166666666664
+        ],
+        "mean_margin_drop": 0.3408203125,
+        "margin_drop_ci_95_hierarchical": [
+          0.027669270833333332,
+          0.9114583333333334
+        ],
+        "answer_flip_fraction": 0.018229166666666668,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.02685546875,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.046875,
+            "mean_margin_drop": 0.91796875,
+            "answer_flip_fraction": 0.046875
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": 0.07763671875,
+            "answer_flip_fraction": 0.0078125
+          }
+        ]
+      },
+      "restore:L22:k+v:H3:R0": {
+        "n_trials": 384,
+        "full_accuracy": 0.9322916666666666,
+        "clean_accuracy": 0.8072916666666666,
+        "restored_accuracy": 0.90625,
+        "mean_marker_margin_effect": 1.9246419270833333,
+        "mean_restored_margin_effect": 1.431640625,
+        "aggregate_margin_recovery_fraction": 0.7438477801268499,
+        "restored_margin_ci_95_hierarchical": [
+          1.2286743164062501,
+          1.71533203125
+        ],
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "full_accuracy": 0.96875,
+            "clean_accuracy": 0.8046875,
+            "restored_accuracy": 0.9296875,
+            "mean_restored_margin_effect": 1.73388671875
+          },
+          {
+            "model_condition": "seed-20260821",
+            "full_accuracy": 0.921875,
+            "clean_accuracy": 0.7578125,
+            "restored_accuracy": 0.890625,
+            "mean_restored_margin_effect": 1.2802734375
+          },
+          {
+            "model_condition": "seed-20260822",
+            "full_accuracy": 0.90625,
+            "clean_accuracy": 0.859375,
+            "restored_accuracy": 0.8984375,
+            "mean_restored_margin_effect": 1.28076171875
+          }
+        ]
+      },
+      "restore:L22:k+v:H3:R1": {
+        "n_trials": 384,
+        "full_accuracy": 0.9322916666666666,
+        "clean_accuracy": 0.7239583333333334,
+        "restored_accuracy": 0.9114583333333334,
+        "mean_marker_margin_effect": 2.9806315104166665,
+        "mean_restored_margin_effect": 2.5358072916666665,
+        "aggregate_margin_recovery_fraction": 0.8507617539452847,
+        "restored_margin_ci_95_hierarchical": [
+          2.2561848958333335,
+          2.8226114908854165
+        ],
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "full_accuracy": 0.96875,
+            "clean_accuracy": 0.703125,
+            "restored_accuracy": 0.9375,
+            "mean_restored_margin_effect": 2.80859375
+          },
+          {
+            "model_condition": "seed-20260821",
+            "full_accuracy": 0.921875,
+            "clean_accuracy": 0.8046875,
+            "restored_accuracy": 0.9140625,
+            "mean_restored_margin_effect": 2.24755859375
+          },
+          {
+            "model_condition": "seed-20260822",
+            "full_accuracy": 0.90625,
+            "clean_accuracy": 0.6640625,
+            "restored_accuracy": 0.8828125,
+            "mean_restored_margin_effect": 2.55126953125
+          }
+        ]
+      },
+      "restore:L22:k+v:H3:R2": {
+        "n_trials": 384,
+        "full_accuracy": 0.9322916666666666,
+        "clean_accuracy": 0.5,
+        "restored_accuracy": 0.4973958333333333,
+        "mean_marker_margin_effect": 5.156901041666667,
+        "mean_restored_margin_effect": 0.015625,
+        "aggregate_margin_recovery_fraction": 0.0030299204645878046,
+        "restored_margin_ci_95_hierarchical": [
+          0.007975260416666666,
+          0.024739583333333332
+        ],
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "full_accuracy": 0.96875,
+            "clean_accuracy": 0.5,
+            "restored_accuracy": 0.5,
+            "mean_restored_margin_effect": 0.01171875
+          },
+          {
+            "model_condition": "seed-20260821",
+            "full_accuracy": 0.921875,
+            "clean_accuracy": 0.5,
+            "restored_accuracy": 0.5,
+            "mean_restored_margin_effect": 0.0234375
+          },
+          {
+            "model_condition": "seed-20260822",
+            "full_accuracy": 0.90625,
+            "clean_accuracy": 0.5,
+            "restored_accuracy": 0.4921875,
+            "mean_restored_margin_effect": 0.01171875
+          }
+        ]
+      },
+      "restore:L22:k+v:H4:R0": {
+        "n_trials": 384,
+        "full_accuracy": 0.9322916666666666,
+        "clean_accuracy": 0.8072916666666666,
+        "restored_accuracy": 0.8463541666666666,
+        "mean_marker_margin_effect": 1.9246419270833333,
+        "mean_restored_margin_effect": 0.2672526041666667,
+        "aggregate_margin_recovery_fraction": 0.13885835095137422,
+        "restored_margin_ci_95_hierarchical": [
+          0.22705078125,
+          0.3050130208333333
+        ],
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "full_accuracy": 0.96875,
+            "clean_accuracy": 0.8046875,
+            "restored_accuracy": 0.8515625,
+            "mean_restored_margin_effect": 0.2333984375
+          },
+          {
+            "model_condition": "seed-20260821",
+            "full_accuracy": 0.921875,
+            "clean_accuracy": 0.7578125,
+            "restored_accuracy": 0.828125,
+            "mean_restored_margin_effect": 0.298828125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "full_accuracy": 0.90625,
+            "clean_accuracy": 0.859375,
+            "restored_accuracy": 0.859375,
+            "mean_restored_margin_effect": 0.26953125
+          }
+        ]
+      },
+      "restore:L22:k+v:H4:R1": {
+        "n_trials": 384,
+        "full_accuracy": 0.9322916666666666,
+        "clean_accuracy": 0.7239583333333334,
+        "restored_accuracy": 0.7734375,
+        "mean_marker_margin_effect": 2.9806315104166665,
+        "mean_restored_margin_effect": 0.3701171875,
+        "aggregate_margin_recovery_fraction": 0.12417408398405505,
+        "restored_margin_ci_95_hierarchical": [
+          0.322265625,
+          0.4119466145833333
+        ],
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "full_accuracy": 0.96875,
+            "clean_accuracy": 0.703125,
+            "restored_accuracy": 0.765625,
+            "mean_restored_margin_effect": 0.330078125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "full_accuracy": 0.921875,
+            "clean_accuracy": 0.8046875,
+            "restored_accuracy": 0.828125,
+            "mean_restored_margin_effect": 0.38623046875
+          },
+          {
+            "model_condition": "seed-20260822",
+            "full_accuracy": 0.90625,
+            "clean_accuracy": 0.6640625,
+            "restored_accuracy": 0.7265625,
+            "mean_restored_margin_effect": 0.39404296875
+          }
+        ]
+      },
+      "restore:L22:k+v:H4:R2": {
+        "n_trials": 384,
+        "full_accuracy": 0.9322916666666666,
+        "clean_accuracy": 0.5,
+        "restored_accuracy": 0.5026041666666666,
+        "mean_marker_margin_effect": 5.156901041666667,
+        "mean_restored_margin_effect": -0.0008138020833333334,
+        "aggregate_margin_recovery_fraction": -0.00015780835753061482,
+        "restored_margin_ci_95_hierarchical": [
+          -0.007486979166666667,
+          0.00537109375
+        ],
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "full_accuracy": 0.96875,
+            "clean_accuracy": 0.5,
+            "restored_accuracy": 0.5,
+            "mean_restored_margin_effect": 0.00244140625
+          },
+          {
+            "model_condition": "seed-20260821",
+            "full_accuracy": 0.921875,
+            "clean_accuracy": 0.5,
+            "restored_accuracy": 0.5234375,
+            "mean_restored_margin_effect": -0.0009765625
+          },
+          {
+            "model_condition": "seed-20260822",
+            "full_accuracy": 0.90625,
+            "clean_accuracy": 0.5,
+            "restored_accuracy": 0.484375,
+            "mean_restored_margin_effect": -0.00390625
+          }
+        ]
+      },
+      "restore:L22:k+v:H3,4:R0": {
+        "n_trials": 384,
+        "full_accuracy": 0.9322916666666666,
+        "clean_accuracy": 0.8072916666666666,
+        "restored_accuracy": 0.9296875,
+        "mean_marker_margin_effect": 1.9246419270833333,
+        "mean_restored_margin_effect": 1.6787109375,
+        "aggregate_margin_recovery_fraction": 0.8722198731501057,
+        "restored_margin_ci_95_hierarchical": [
+          1.4951090494791668,
+          1.9148844401041665
+        ],
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "full_accuracy": 0.96875,
+            "clean_accuracy": 0.8046875,
+            "restored_accuracy": 0.953125,
+            "mean_restored_margin_effect": 1.923828125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "full_accuracy": 0.921875,
+            "clean_accuracy": 0.7578125,
+            "restored_accuracy": 0.9296875,
+            "mean_restored_margin_effect": 1.578125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "full_accuracy": 0.90625,
+            "clean_accuracy": 0.859375,
+            "restored_accuracy": 0.90625,
+            "mean_restored_margin_effect": 1.5341796875
+          }
+        ]
+      },
+      "restore:L22:k+v:H3,4:R1": {
+        "n_trials": 384,
+        "full_accuracy": 0.9322916666666666,
+        "clean_accuracy": 0.7239583333333334,
+        "restored_accuracy": 0.9296875,
+        "mean_marker_margin_effect": 2.9806315104166665,
+        "mean_restored_margin_effect": 2.8017578125,
+        "aggregate_margin_recovery_fraction": 0.9399879866761317,
+        "restored_margin_ci_95_hierarchical": [
+          2.5483357747395834,
+          3.05029296875
+        ],
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "full_accuracy": 0.96875,
+            "clean_accuracy": 0.703125,
+            "restored_accuracy": 0.9453125,
+            "mean_restored_margin_effect": 2.99169921875
+          },
+          {
+            "model_condition": "seed-20260821",
+            "full_accuracy": 0.921875,
+            "clean_accuracy": 0.8046875,
+            "restored_accuracy": 0.921875,
+            "mean_restored_margin_effect": 2.55615234375
+          },
+          {
+            "model_condition": "seed-20260822",
+            "full_accuracy": 0.90625,
+            "clean_accuracy": 0.6640625,
+            "restored_accuracy": 0.921875,
+            "mean_restored_margin_effect": 2.857421875
+          }
+        ]
+      },
+      "restore:L22:k+v:H3,4:R2": {
+        "n_trials": 384,
+        "full_accuracy": 0.9322916666666666,
+        "clean_accuracy": 0.5,
+        "restored_accuracy": 0.5,
+        "mean_marker_margin_effect": 5.156901041666667,
+        "mean_restored_margin_effect": 0.012532552083333334,
+        "aggregate_margin_recovery_fraction": 0.0024302487059714682,
+        "restored_margin_ci_95_hierarchical": [
+          0.005208333333333333,
+          0.020833333333333332
+        ],
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "full_accuracy": 0.96875,
+            "clean_accuracy": 0.5,
+            "restored_accuracy": 0.5,
+            "mean_restored_margin_effect": 0.00830078125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "full_accuracy": 0.921875,
+            "clean_accuracy": 0.5,
+            "restored_accuracy": 0.5078125,
+            "mean_restored_margin_effect": 0.0107421875
+          },
+          {
+            "model_condition": "seed-20260822",
+            "full_accuracy": 0.90625,
+            "clean_accuracy": 0.5,
+            "restored_accuracy": 0.4921875,
+            "mean_restored_margin_effect": 0.0185546875
+          }
+        ]
+      }
+    },
+    "top_margin_removals": [
+      "remove:L22:k+v:H3:R1",
+      "remove:L22:k:H3:R1",
+      "remove:L20:k+v:H5:R2",
+      "remove:L20:k+v:H5:R1",
+      "remove:L22:k+v:H3:R0",
+      "remove:L22:k:H3:R0",
+      "remove:L20:k+v:H5:R0",
+      "remove:L25:k+v:H4:R2",
+      "remove:L25:k+v:H3:R2",
+      "remove:L22:k+v:H4:R1",
+      "remove:L22:k:H4:R1",
+      "remove:L22:k+v:H4:R0"
+    ],
+    "heldout_followup": {
+      "removal": {
+        "k": {
+          "n_trials": 384,
+          "n_episodes": 96,
+          "baseline_accuracy": 0.9453125,
+          "changed_accuracy": 0.9427083333333334,
+          "accuracy_drop": 0.0026041666666666665,
+          "accuracy_drop_ci_95_hierarchical": [
+            -0.010416666666666666,
+            0.018229166666666668
+          ],
+          "mean_margin_drop": 0.00927734375,
+          "margin_drop_ci_95_hierarchical": [
+            -0.011067708333333334,
+            0.028645833333333332
+          ],
+          "answer_flip_fraction": 0.0078125,
+          "per_seed": [
+            {
+              "model_condition": "seed-20260820",
+              "n_trials": 128,
+              "accuracy_drop": 0.015625,
+              "mean_margin_drop": 0.01123046875,
+              "answer_flip_fraction": 0.015625
+            },
+            {
+              "model_condition": "seed-20260821",
+              "n_trials": 128,
+              "accuracy_drop": -0.0078125,
+              "mean_margin_drop": 0.0048828125,
+              "answer_flip_fraction": 0.0078125
+            },
+            {
+              "model_condition": "seed-20260822",
+              "n_trials": 128,
+              "accuracy_drop": 0.0,
+              "mean_margin_drop": 0.01171875,
+              "answer_flip_fraction": 0.0
+            }
+          ]
+        },
+        "v": {
+          "n_trials": 384,
+          "n_episodes": 96,
+          "baseline_accuracy": 0.9453125,
+          "changed_accuracy": 0.7942708333333334,
+          "accuracy_drop": 0.15104166666666666,
+          "accuracy_drop_ci_95_hierarchical": [
+            0.08072916666666667,
+            0.23697916666666666
+          ],
+          "mean_margin_drop": 2.3958333333333335,
+          "margin_drop_ci_95_hierarchical": [
+            1.7079996744791668,
+            2.8816813151041667
+          ],
+          "answer_flip_fraction": 0.16145833333333334,
+          "per_seed": [
+            {
+              "model_condition": "seed-20260820",
+              "n_trials": 128,
+              "accuracy_drop": 0.2421875,
+              "mean_margin_drop": 2.8671875,
+              "answer_flip_fraction": 0.2578125
+            },
+            {
+              "model_condition": "seed-20260821",
+              "n_trials": 128,
+              "accuracy_drop": 0.09375,
+              "mean_margin_drop": 1.6904296875,
+              "answer_flip_fraction": 0.09375
+            },
+            {
+              "model_condition": "seed-20260822",
+              "n_trials": 128,
+              "accuracy_drop": 0.1171875,
+              "mean_margin_drop": 2.6298828125,
+              "answer_flip_fraction": 0.1328125
+            }
+          ]
+        },
+        "k+v": {
+          "n_trials": 384,
+          "n_episodes": 96,
+          "baseline_accuracy": 0.9453125,
+          "changed_accuracy": 0.7890625,
+          "accuracy_drop": 0.15625,
+          "accuracy_drop_ci_95_hierarchical": [
+            0.08854166666666667,
+            0.23958333333333334
+          ],
+          "mean_margin_drop": 2.380859375,
+          "margin_drop_ci_95_hierarchical": [
+            1.6826171875,
+            2.88819580078125
+          ],
+          "answer_flip_fraction": 0.16666666666666666,
+          "per_seed": [
+            {
+              "model_condition": "seed-20260820",
+              "n_trials": 128,
+              "accuracy_drop": 0.2421875,
+              "mean_margin_drop": 2.86962890625,
+              "answer_flip_fraction": 0.2578125
+            },
+            {
+              "model_condition": "seed-20260821",
+              "n_trials": 128,
+              "accuracy_drop": 0.1015625,
+              "mean_margin_drop": 1.662109375,
+              "answer_flip_fraction": 0.1015625
+            },
+            {
+              "model_condition": "seed-20260822",
+              "n_trials": 128,
+              "accuracy_drop": 0.125,
+              "mean_margin_drop": 2.61083984375,
+              "answer_flip_fraction": 0.140625
+            }
+          ]
+        }
+      },
+      "restoration": {
+        "k": {
+          "n_trials": 384,
+          "full_accuracy": 0.9453125,
+          "clean_accuracy": 0.5,
+          "restored_accuracy": 0.5078125,
+          "mean_marker_margin_effect": 5.084798177083333,
+          "mean_restored_margin_effect": 0.006673177083333333,
+          "aggregate_margin_recovery_fraction": 0.001312377964853878,
+          "restored_margin_ci_95_hierarchical": [
+            -0.013671875,
+            0.0283203125
+          ],
+          "per_seed": [
+            {
+              "model_condition": "seed-20260820",
+              "full_accuracy": 0.96875,
+              "clean_accuracy": 0.5,
+              "restored_accuracy": 0.5078125,
+              "mean_restored_margin_effect": -0.00341796875
+            },
+            {
+              "model_condition": "seed-20260821",
+              "full_accuracy": 0.9140625,
+              "clean_accuracy": 0.5,
+              "restored_accuracy": 0.5,
+              "mean_restored_margin_effect": 0.0185546875
+            },
+            {
+              "model_condition": "seed-20260822",
+              "full_accuracy": 0.953125,
+              "clean_accuracy": 0.5,
+              "restored_accuracy": 0.515625,
+              "mean_restored_margin_effect": 0.0048828125
+            }
+          ]
+        },
+        "v": {
+          "n_trials": 384,
+          "full_accuracy": 0.9453125,
+          "clean_accuracy": 0.5,
+          "restored_accuracy": 0.8125,
+          "mean_marker_margin_effect": 5.084798177083333,
+          "mean_restored_margin_effect": 3.0143229166666665,
+          "aggregate_margin_recovery_fraction": 0.5928107294900932,
+          "restored_margin_ci_95_hierarchical": [
+            2.2376220703125003,
+            3.6289428710937495
+          ],
+          "per_seed": [
+            {
+              "model_condition": "seed-20260820",
+              "full_accuracy": 0.96875,
+              "clean_accuracy": 0.5,
+              "restored_accuracy": 0.8203125,
+              "mean_restored_margin_effect": 3.60498046875
+            },
+            {
+              "model_condition": "seed-20260821",
+              "full_accuracy": 0.9140625,
+              "clean_accuracy": 0.5,
+              "restored_accuracy": 0.7578125,
+              "mean_restored_margin_effect": 2.2158203125
+            },
+            {
+              "model_condition": "seed-20260822",
+              "full_accuracy": 0.953125,
+              "clean_accuracy": 0.5,
+              "restored_accuracy": 0.859375,
+              "mean_restored_margin_effect": 3.22216796875
+            }
+          ]
+        },
+        "k+v": {
+          "n_trials": 384,
+          "full_accuracy": 0.9453125,
+          "clean_accuracy": 0.5,
+          "restored_accuracy": 0.8125,
+          "mean_marker_margin_effect": 5.084798177083333,
+          "mean_restored_margin_effect": 2.9972330729166665,
+          "aggregate_margin_recovery_fraction": 0.589449761531321,
+          "restored_margin_ci_95_hierarchical": [
+            2.208984375,
+            3.6181640625
+          ],
+          "per_seed": [
+            {
+              "model_condition": "seed-20260820",
+              "full_accuracy": 0.96875,
+              "clean_accuracy": 0.5,
+              "restored_accuracy": 0.828125,
+              "mean_restored_margin_effect": 3.59228515625
+            },
+            {
+              "model_condition": "seed-20260821",
+              "full_accuracy": 0.9140625,
+              "clean_accuracy": 0.5,
+              "restored_accuracy": 0.7421875,
+              "mean_restored_margin_effect": 2.1845703125
+            },
+            {
+              "model_condition": "seed-20260822",
+              "full_accuracy": 0.953125,
+              "clean_accuracy": 0.5,
+              "restored_accuracy": 0.8671875,
+              "mean_restored_margin_effect": 3.21484375
+            }
+          ]
+        }
+      },
+      "provenance": [
+        {
+          "model_condition": "seed-20260820",
+          "evaluation_seed": 20260950,
+          "adapter_sha256": "e76c866dcc822bd4a72892ccdbd2a1aa212804ac9e43fa8c689849062c0d62b6",
+          "n_trials": 128
+        },
+        {
+          "model_condition": "seed-20260821",
+          "evaluation_seed": 20260951,
+          "adapter_sha256": "9d24e75d8816d5f09c198834ae95a5c82e849f46325b79af55058f5db4018b60",
+          "n_trials": 128
+        },
+        {
+          "model_condition": "seed-20260822",
+          "evaluation_seed": 20260952,
+          "adapter_sha256": "e1a412e0ca45e45c432f04de3276dd119aebfdd7f07a380a1f2b882a70464702",
+          "n_trials": 128
+        }
+      ]
+    },
+    "marker_delta_norms": {
+      "20:k:0:0": 0.7256416194140911,
+      "20:k:0:1": 0.7706937156617641,
+      "20:k:0:2": 0.9013790562748909,
+      "20:k:0:3": 1.0433222365876038,
+      "20:k:0:4": 0.8755716271698475,
+      "20:k:0:5": 0.906227596104145,
+      "20:k:0:6": 0.9147839210927486,
+      "20:k:0:7": 0.8544620548685392,
+      "20:k:1:0": 0.7698176242411137,
+      "20:k:1:1": 0.8162201431890329,
+      "20:k:1:2": 0.9583483623961607,
+      "20:k:1:3": 1.1083180358012517,
+      "20:k:1:4": 0.9317537285387516,
+      "20:k:1:5": 0.9602095521986485,
+      "20:k:1:6": 0.9730903021991253,
+      "20:k:1:7": 0.906575138370196,
+      "20:k:2:0": 0.8282490968704224,
+      "20:k:2:1": 0.8793688590327898,
+      "20:k:2:2": 1.0306627949078877,
+      "20:k:2:3": 1.1906803399324417,
+      "20:k:2:4": 0.9997010764976343,
+      "20:k:2:5": 1.0316225724915664,
+      "20:k:2:6": 1.0460182875394821,
+      "20:k:2:7": 0.9722983166575432,
+      "20:v:0:0": 1.4327405417958896,
+      "20:v:0:1": 0.835945994903644,
+      "20:v:0:2": 1.0151609840492408,
+      "20:v:0:3": 1.2189594060182571,
+      "20:v:0:4": 1.2178275833527248,
+      "20:v:0:5": 1.0968077505628269,
+      "20:v:0:6": 0.8534917011857033,
+      "20:v:0:7": 0.9687788474063078,
+      "20:v:1:0": 1.5202328835924466,
+      "20:v:1:1": 0.8864274484415849,
+      "20:v:1:2": 1.077095704774062,
+      "20:v:1:3": 1.2928308422366779,
+      "20:v:1:4": 1.292436031003793,
+      "20:v:1:5": 1.1630142504970233,
+      "20:v:1:6": 0.9062934592366219,
+      "20:v:1:7": 1.0267491166790326,
+      "20:v:2:0": 1.634770614405473,
+      "20:v:2:1": 0.9531765456000963,
+      "20:v:2:2": 1.1583184798558552,
+      "20:v:2:3": 1.3894218107064564,
+      "20:v:2:4": 1.3896685888369877,
+      "20:v:2:5": 1.2503419294953346,
+      "20:v:2:6": 0.9742519321540991,
+      "20:v:2:7": 1.1037931541601818,
+      "21:k:0:0": 1.1800111159682274,
+      "21:k:0:1": 0.5075930810223023,
+      "21:k:0:2": 0.8822179821630319,
+      "21:k:0:3": 0.9532084601620833,
+      "21:k:0:4": 0.6967072536547979,
+      "21:k:0:5": 0.6614962033927441,
+      "21:k:0:6": 0.7523532249033451,
+      "21:k:0:7": 0.8902369725207487,
+      "21:k:1:0": 1.3978612298766773,
+      "21:k:1:1": 0.595058549195528,
+      "21:k:1:2": 1.0189630935589473,
+      "21:k:1:3": 1.1329010476668675,
+      "21:k:1:4": 0.7957604552308718,
+      "21:k:1:5": 0.7206748276948929,
+      "21:k:1:6": 0.8772243186831474,
+      "21:k:1:7": 1.0589018935958545,
+      "21:k:2:0": 1.649537446598212,
+      "21:k:2:1": 0.6485566099484762,
+      "21:k:2:2": 1.1514405608177185,
+      "21:k:2:3": 1.301821492612362,
+      "21:k:2:4": 0.889923827101787,
+      "21:k:2:5": 0.8097816482186317,
+      "21:k:2:6": 0.98445692161719,
+      "21:k:2:7": 1.1882057065765064,
+      "21:v:0:0": 1.3304585913817089,
+      "21:v:0:1": 0.7467215843498707,
+      "21:v:0:2": 1.2414387986063957,
+      "21:v:0:3": 1.7132077117760975,
+      "21:v:0:4": 0.8703196421265602,
+      "21:v:0:5": 0.8383472909530004,
+      "21:v:0:6": 1.4870217442512512,
+      "21:v:0:7": 1.2856857528289158,
+      "21:v:1:0": 1.5588498910268147,
+      "21:v:1:1": 0.8779152234395345,
+      "21:v:1:2": 1.4413135175903637,
+      "21:v:1:3": 1.9445077255368233,
+      "21:v:1:4": 0.9760748992363611,
+      "21:v:1:5": 0.9574356898665428,
+      "21:v:1:6": 1.691937233010928,
+      "21:v:1:7": 1.4521287580331166,
+      "21:v:2:0": 1.8101238682866096,
+      "21:v:2:1": 0.9947337669630846,
+      "21:v:2:2": 1.650779498120149,
+      "21:v:2:3": 2.2640724008282027,
+      "21:v:2:4": 1.0958053121964137,
+      "21:v:2:5": 1.0954847186803818,
+      "21:v:2:6": 1.9763276427984238,
+      "21:v:2:7": 1.6063170284032822,
+      "22:k:0:0": 0.8177291229367256,
+      "22:k:0:1": 0.7317549710472425,
+      "22:k:0:2": 0.6594237846632799,
+      "22:k:0:3": 2.6971669048070908,
+      "22:k:0:4": 1.8141070033113162,
+      "22:k:0:5": 0.8362009512881438,
+      "22:k:0:6": 1.1132749989628792,
+      "22:k:0:7": 1.0870350897312164,
+      "22:k:1:0": 0.922024971495072,
+      "22:k:1:1": 0.8103472913304964,
+      "22:k:1:2": 0.7223003059625626,
+      "22:k:1:3": 3.2676122933626175,
+      "22:k:1:4": 1.9704012423753738,
+      "22:k:1:5": 0.916775227834781,
+      "22:k:1:6": 1.3320254931847255,
+      "22:k:1:7": 1.3365222662687302,
+      "22:k:2:0": 0.9620152016480764,
+      "22:k:2:1": 0.8503103752930959,
+      "22:k:2:2": 0.7667557088037332,
+      "22:k:2:3": 3.4771982381741204,
+      "22:k:2:4": 1.9029306843876839,
+      "22:k:2:5": 0.9478122666478157,
+      "22:k:2:6": 1.433113768696785,
+      "22:k:2:7": 1.3770771399140358,
+      "22:v:0:0": 1.2793660536408424,
+      "22:v:0:1": 0.8074677350620428,
+      "22:v:0:2": 0.8017817412813505,
+      "22:v:0:3": 0.9969329535961151,
+      "22:v:0:4": 1.4186139528950055,
+      "22:v:0:5": 1.1509707892934482,
+      "22:v:0:6": 1.7006902943054836,
+      "22:v:0:7": 1.0890935535232227,
+      "22:v:1:0": 1.5563807313640912,
+      "22:v:1:1": 0.886436615139246,
+      "22:v:1:2": 0.8759014929334322,
+      "22:v:1:3": 1.2075207730134327,
+      "22:v:1:4": 1.5540001019835472,
+      "22:v:1:5": 1.162523403763771,
+      "22:v:1:6": 2.032894584039847,
+      "22:v:1:7": 1.31867512067159,
+      "22:v:2:0": 1.6121707359949748,
+      "22:v:2:1": 0.9270673170685768,
+      "22:v:2:2": 0.9318874130646387,
+      "22:v:2:3": 1.3055722067753475,
+      "22:v:2:4": 1.5224164500832558,
+      "22:v:2:5": 1.1843535328904788,
+      "22:v:2:6": 2.1678929006059966,
+      "22:v:2:7": 1.3885525241494179,
+      "23:k:0:0": 1.6149022777875264,
+      "23:k:0:1": 1.1637853235006332,
+      "23:k:0:2": 0.7240850354234377,
+      "23:k:0:3": 0.8428114602963129,
+      "23:k:0:4": 0.7567536570131779,
+      "23:k:0:5": 1.194059994071722,
+      "23:k:0:6": 0.9884323279062907,
+      "23:k:0:7": 1.5398810630043347,
+      "23:k:1:0": 1.8865353961785634,
+      "23:k:1:1": 1.3450309944649537,
+      "23:k:1:2": 0.771287259956201,
+      "23:k:1:3": 0.8845589744548003,
+      "23:k:1:4": 0.8141204665104548,
+      "23:k:1:5": 1.3771593670050304,
+      "23:k:1:6": 1.1705080928901832,
+      "23:k:1:7": 1.8584659174084663,
+      "23:k:2:0": 3.568745026985804,
+      "23:k:2:1": 3.018008403480053,
+      "23:k:2:2": 1.221390259762605,
+      "23:k:2:3": 1.3092639160652955,
+      "23:k:2:4": 1.20197119936347,
+      "23:k:2:5": 3.204038339356581,
+      "23:k:2:6": 2.6140645245711007,
+      "23:k:2:7": 4.040052622556686,
+      "23:v:0:0": 2.0985755200187364,
+      "23:v:0:1": 1.4801955198248227,
+      "23:v:0:2": 0.9168854802846909,
+      "23:v:0:3": 0.9217279329895973,
+      "23:v:0:4": 1.2389557945231597,
+      "23:v:0:5": 1.4201983287930489,
+      "23:v:0:6": 1.4329670096437137,
+      "23:v:0:7": 2.0612039466698966,
+      "23:v:1:0": 2.5021129151185355,
+      "23:v:1:1": 1.8970529735088348,
+      "23:v:1:2": 1.128584373742342,
+      "23:v:1:3": 0.9761912909646829,
+      "23:v:1:4": 1.4117368360360463,
+      "23:v:1:5": 1.6879362985491753,
+      "23:v:1:6": 1.9175364077091217,
+      "23:v:1:7": 2.952474762996038,
+      "23:v:2:0": 5.208864276607831,
+      "23:v:2:1": 4.712971657514572,
+      "23:v:2:2": 2.902110536893209,
+      "23:v:2:3": 1.3302284528811772,
+      "23:v:2:4": 2.6815137937664986,
+      "23:v:2:5": 4.607641999920209,
+      "23:v:2:6": 4.759666418035825,
+      "23:v:2:7": 9.7018594344457,
+      "24:k:0:0": 1.736165424187978,
+      "24:k:0:1": 0.9371645885209242,
+      "24:k:0:2": 0.8640753142535686,
+      "24:k:0:3": 2.1508910407622657,
+      "24:k:0:4": 1.861375905573368,
+      "24:k:0:5": 1.9707233433922131,
+      "24:k:0:6": 2.0173966586589813,
+      "24:k:0:7": 1.7897800331314404,
+      "24:k:1:0": 2.7916109835108123,
+      "24:k:1:1": 1.3373308752973874,
+      "24:k:1:2": 1.09869855021437,
+      "24:k:1:3": 3.425645371278127,
+      "24:k:1:4": 2.9380440935492516,
+      "24:k:1:5": 3.0850671529769897,
+      "24:k:1:6": 3.9454667369524636,
+      "24:k:1:7": 2.9401708841323853,
+      "24:k:2:0": 7.635112295548121,
+      "24:k:2:1": 4.296306813756625,
+      "24:k:2:2": 2.9934551119804382,
+      "24:k:2:3": 11.831074992815653,
+      "24:k:2:4": 8.925841162602106,
+      "24:k:2:5": 9.112434287865957,
+      "24:k:2:6": 14.258959025144577,
+      "24:k:2:7": 9.622151682774225,
+      "24:v:0:0": 1.6307243704795837,
+      "24:v:0:1": 1.8329342405001323,
+      "24:v:0:2": 1.4296198810140293,
+      "24:v:0:3": 2.252838554481665,
+      "24:v:0:4": 2.262414942185084,
+      "24:v:0:5": 2.3573356568813324,
+      "24:v:0:6": 1.4816884348789852,
+      "24:v:0:7": 1.7305142084757488,
+      "24:v:1:0": 2.601156733930111,
+      "24:v:1:1": 2.7280558422207832,
+      "24:v:1:2": 1.9510076592365901,
+      "24:v:1:3": 3.504709616303444,
+      "24:v:1:4": 3.0775574197371802,
+      "24:v:1:5": 2.8735388020674386,
+      "24:v:1:6": 2.365643247961998,
+      "24:v:1:7": 2.439643308520317,
+      "24:v:2:0": 6.25397315621376,
+      "24:v:2:1": 7.53750105202198,
+      "24:v:2:2": 4.637466162443161,
+      "24:v:2:3": 7.366516093413035,
+      "24:v:2:4": 4.30254952609539,
+      "24:v:2:5": 4.020753035942714,
+      "24:v:2:6": 8.427478651205698,
+      "24:v:2:7": 4.5882924646139145,
+      "25:k:0:0": 1.1732149062057335,
+      "25:k:0:1": 1.2799522131681442,
+      "25:k:0:2": 1.0555376174549262,
+      "25:k:0:3": 1.7102436572313309,
+      "25:k:0:4": 1.9147224128246307,
+      "25:k:0:5": 1.3159518837928772,
+      "25:k:0:6": 1.8289083590110142,
+      "25:k:0:7": 1.7203452835480373,
+      "25:k:1:0": 1.6437045832475026,
+      "25:k:1:1": 1.8992518583933513,
+      "25:k:1:2": 1.5744637573758762,
+      "25:k:1:3": 2.7195081834991774,
+      "25:k:1:4": 3.2118990247448287,
+      "25:k:1:5": 1.969032349685828,
+      "25:k:1:6": 2.7562067906061807,
+      "25:k:1:7": 2.681477427482605,
+      "25:k:2:0": 4.82634783287843,
+      "25:k:2:1": 4.73767205576102,
+      "25:k:2:2": 4.659780705968539,
+      "25:k:2:3": 7.07718588411808,
+      "25:k:2:4": 8.567993005116781,
+      "25:k:2:5": 5.506352494160335,
+      "25:k:2:6": 6.988946715990703,
+      "25:k:2:7": 7.167552749315898,
+      "25:v:0:0": 1.1483387301365535,
+      "25:v:0:1": 1.3956036070982616,
+      "25:v:0:2": 1.271640268464883,
+      "25:v:0:3": 2.5086116467912993,
+      "25:v:0:4": 1.7133199150363605,
+      "25:v:0:5": 1.2496242473522823,
+      "25:v:0:6": 2.445159524679184,
+      "25:v:0:7": 1.448548433681329,
+      "25:v:1:0": 1.3319874083002408,
+      "25:v:1:1": 1.9549264162778854,
+      "25:v:1:2": 1.8847102125485737,
+      "25:v:1:3": 4.060478582978249,
+      "25:v:1:4": 3.0036709383130074,
+      "25:v:1:5": 1.8174263139565785,
+      "25:v:1:6": 3.1306472569704056,
+      "25:v:1:7": 2.2071900963783264,
+      "25:v:2:0": 2.8255996704101562,
+      "25:v:2:1": 4.051281998554866,
+      "25:v:2:2": 5.0077492495377856,
+      "25:v:2:3": 8.226877997318903,
+      "25:v:2:4": 7.997903247674306,
+      "25:v:2:5": 4.557549998164177,
+      "25:v:2:6": 4.409247626860936,
+      "25:v:2:7": 4.570526450872421
+    }
+  },
+  "binding": {
+    "conditions": {
+      "test_q_head_17": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.7135416666666666,
+        "accuracy_drop": 0.21875,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.17708333333333334,
+          0.2630208333333333
+        ],
+        "mean_margin_drop": 3.3606770833333335,
+        "margin_drop_ci_95_hierarchical": [
+          3.1057942708333335,
+          3.623701985677083
+        ],
+        "answer_flip_fraction": 0.21875,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.25,
+            "mean_margin_drop": 3.6171875,
+            "answer_flip_fraction": 0.25
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.203125,
+            "mean_margin_drop": 3.2333984375,
+            "answer_flip_fraction": 0.203125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.203125,
+            "mean_margin_drop": 3.2314453125,
+            "answer_flip_fraction": 0.203125
+          }
+        ]
+      },
+      "test_q_matcher_group": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.171875,
+        "accuracy_drop": 0.7604166666666666,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.6822916666666666,
+          0.8307291666666666
+        ],
+        "mean_margin_drop": 8.153645833333334,
+        "margin_drop_ci_95_hierarchical": [
+          7.30333251953125,
+          9.164396158854167
+        ],
+        "answer_flip_fraction": 0.7604166666666666,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.8203125,
+            "mean_margin_drop": 9.19921875,
+            "answer_flip_fraction": 0.8203125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.734375,
+            "mean_margin_drop": 7.3955078125,
+            "answer_flip_fraction": 0.734375
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.7265625,
+            "mean_margin_drop": 7.8662109375,
+            "answer_flip_fraction": 0.7265625
+          }
+        ]
+      },
+      "demo_k_matcher_kv": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.09114583333333333,
+        "accuracy_drop": 0.8411458333333334,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.7786458333333334,
+          0.9010416666666666
+        ],
+        "mean_margin_drop": 9.62451171875,
+        "margin_drop_ci_95_hierarchical": [
+          8.734370930989583,
+          10.717622884114583
+        ],
+        "answer_flip_fraction": 0.8411458333333334,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.890625,
+            "mean_margin_drop": 10.763671875,
+            "answer_flip_fraction": 0.890625
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.8203125,
+            "mean_margin_drop": 8.85546875,
+            "answer_flip_fraction": 0.8203125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.8125,
+            "mean_margin_drop": 9.25439453125,
+            "answer_flip_fraction": 0.8125
+          }
+        ]
+      },
+      "demo_v_matcher_kv": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9296875,
+        "accuracy_drop": 0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.010416666666666666,
+          0.015625
+        ],
+        "mean_margin_drop": 0.028483072916666668,
+        "margin_drop_ci_95_hierarchical": [
+          0.01806640625,
+          0.0390625
+        ],
+        "answer_flip_fraction": 0.0078125,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": 0.03125,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.0234375,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": 0.03076171875,
+            "answer_flip_fraction": 0.0078125
+          }
+        ]
+      },
+      "demo_kv_matcher_kv": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.09895833333333333,
+        "accuracy_drop": 0.8333333333333334,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.7682291666666666,
+          0.8932291666666666
+        ],
+        "mean_margin_drop": 9.631184895833334,
+        "margin_drop_ci_95_hierarchical": [
+          8.712723795572916,
+          10.674841308593749
+        ],
+        "answer_flip_fraction": 0.8333333333333334,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.8828125,
+            "mean_margin_drop": 10.76611328125,
+            "answer_flip_fraction": 0.8828125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.8203125,
+            "mean_margin_drop": 8.8291015625,
+            "answer_flip_fraction": 0.8203125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.796875,
+            "mean_margin_drop": 9.29833984375,
+            "answer_flip_fraction": 0.796875
+          }
+        ]
+      },
+      "demo_label_z_matcher_group": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.009928385416666666,
+        "margin_drop_ci_95_hierarchical": [
+          -0.00244140625,
+          0.022623697916666668
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.01220703125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.01953125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.001953125,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "demo_label_residual_pre_22": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": 0.0030924479166666665,
+        "margin_drop_ci_95_hierarchical": [
+          -0.01025390625,
+          0.01513671875
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.01171875,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.0068359375,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.00927734375,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "combined_q_kv_counterfactual": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.7838541666666666,
+        "accuracy_drop": 0.1484375,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.1171875,
+          0.1796875
+        ],
+        "mean_margin_drop": 2.8645833333333335,
+        "margin_drop_ci_95_hierarchical": [
+          2.5618489583333335,
+          3.1705729166666665
+        ],
+        "answer_flip_fraction": 0.2109375,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.15625,
+            "mean_margin_drop": 2.8916015625,
+            "answer_flip_fraction": 0.1875
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.1484375,
+            "mean_margin_drop": 2.5537109375,
+            "answer_flip_fraction": 0.2265625
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.140625,
+            "mean_margin_drop": 3.1484375,
+            "answer_flip_fraction": 0.21875
+          }
+        ]
+      }
+    }
+  },
+  "geometry": {
+    "families": {
+      "random": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "accuracy": 0.9244791666666666,
+        "accuracy_ci_95_hierarchical": [
+          0.8880208333333334,
+          0.9583333333333334
+        ],
+        "mean_margin": 5.018229166666667,
+        "margin_ci_95_hierarchical": [
+          4.525541178385417,
+          5.597989908854166
+        ],
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "accuracy": 0.953125,
+            "mean_margin": 5.63916015625
+          },
+          {
+            "model_condition": "seed-20260821",
+            "accuracy": 0.8984375,
+            "mean_margin": 4.5869140625
+          },
+          {
+            "model_condition": "seed-20260822",
+            "accuracy": 0.921875,
+            "mean_margin": 4.82861328125
+          }
+        ],
+        "mean_head_22_17_match_contrast": 0.360965092976888,
+        "attention_contrast_ci_95_hierarchical": [
+          0.2870353142420451,
+          0.4501472473144531
+        ],
+        "mean_projected_cosine": -0.02307865660372954,
+        "mean_projected_distance": 0.13710829569026828,
+        "max_abs_full_pair_cosine": 9.002784887949625e-09
+      },
+      "rowspace": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "accuracy": 0.9375,
+        "accuracy_ci_95_hierarchical": [
+          0.9114583333333334,
+          0.9635416666666666
+        ],
+        "mean_margin": 5.005045572916667,
+        "margin_ci_95_hierarchical": [
+          4.514156087239583,
+          5.690433756510417
+        ],
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "accuracy": 0.953125,
+            "mean_margin": 5.73974609375
+          },
+          {
+            "model_condition": "seed-20260821",
+            "accuracy": 0.921875,
+            "mean_margin": 4.60791015625
+          },
+          {
+            "model_condition": "seed-20260822",
+            "accuracy": 0.9375,
+            "mean_margin": 4.66748046875
+          }
+        ],
+        "mean_head_22_17_match_contrast": 0.35759703318277997,
+        "attention_contrast_ci_95_hierarchical": [
+          0.27518434524536134,
+          0.46624643007914224
+        ],
+        "mean_projected_cosine": -2.1206991792273772e-08,
+        "mean_projected_distance": 1.4142136313021183,
+        "max_abs_full_pair_cosine": 9.390835960706076e-09
+      },
+      "nullspace": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "accuracy": 0.9401041666666666,
+        "accuracy_ci_95_hierarchical": [
+          0.9114583333333334,
+          0.9661458333333334
+        ],
+        "mean_margin": 5.05517578125,
+        "margin_ci_95_hierarchical": [
+          4.731770833333333,
+          5.432466634114583
+        ],
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "accuracy": 0.9375,
+            "mean_margin": 5.42578125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "accuracy": 0.9609375,
+            "mean_margin": 4.8798828125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "accuracy": 0.921875,
+            "mean_margin": 4.85986328125
+          }
+        ],
+        "mean_head_22_17_match_contrast": 0.36133289337158203,
+        "attention_contrast_ci_95_hierarchical": [
+          0.3052679856618245,
+          0.43044591744740796
+        ],
+        "mean_projected_cosine": 0.00010778874177693372,
+        "mean_projected_distance": 1.330656333268602e-07,
+        "max_abs_full_pair_cosine": 1.0011717677116394e-08
+      },
+      "collision": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "accuracy": 0.9114583333333334,
+        "accuracy_ci_95_hierarchical": [
+          0.8828125,
+          0.9401041666666666
+        ],
+        "mean_margin": 4.982747395833333,
+        "margin_ci_95_hierarchical": [
+          4.673978678385417,
+          5.328287760416667
+        ],
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "accuracy": 0.9140625,
+            "mean_margin": 5.259765625
+          },
+          {
+            "model_condition": "seed-20260821",
+            "accuracy": 0.9140625,
+            "mean_margin": 4.80517578125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "accuracy": 0.90625,
+            "mean_margin": 4.88330078125
+          }
+        ],
+        "mean_head_22_17_match_contrast": 0.35841743151346844,
+        "attention_contrast_ci_95_hierarchical": [
+          0.3010107119878133,
+          0.4259264270464579
+        ],
+        "mean_projected_cosine": 1.0000000608464081,
+        "mean_projected_distance": 5.282714103197842e-07,
+        "max_abs_full_pair_cosine": 1.2014061212539673e-07
+      },
+      "anti_match": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "accuracy": 0.13541666666666666,
+        "accuracy_ci_95_hierarchical": [
+          0.08854166666666667,
+          0.18229166666666666
+        ],
+        "mean_margin": -4.242350260416667,
+        "margin_ci_95_hierarchical": [
+          -4.585941569010417,
+          -3.904130045572917
+        ],
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "accuracy": 0.15625,
+            "mean_margin": -4.4765625
+          },
+          {
+            "model_condition": "seed-20260821",
+            "accuracy": 0.09375,
+            "mean_margin": -4.3154296875
+          },
+          {
+            "model_condition": "seed-20260822",
+            "accuracy": 0.15625,
+            "mean_margin": -3.93505859375
+          }
+        ]
+      }
+    },
+    "rowspace": [
+      {
+        "source": [
+          "q_proj",
+          "k_proj",
+          "v_proj"
+        ],
+        "matrix_shape": [
+          48,
+          5120
+        ],
+        "numerical_rank": 48,
+        "largest_singular_value": 2.1783220767974854,
+        "smallest_retained_singular_value": 0.5330585241317749
+      },
+      {
+        "source": [
+          "q_proj",
+          "k_proj",
+          "v_proj"
+        ],
+        "matrix_shape": [
+          48,
+          5120
+        ],
+        "numerical_rank": 48,
+        "largest_singular_value": 2.4601213932037354,
+        "smallest_retained_singular_value": 0.5373697280883789
+      },
+      {
+        "source": [
+          "q_proj",
+          "k_proj",
+          "v_proj"
+        ],
+        "matrix_shape": [
+          48,
+          5120
+        ],
+        "numerical_rank": 48,
+        "largest_singular_value": 2.3842101097106934,
+        "smallest_retained_singular_value": 0.5321341156959534
+      }
+    ]
+  },
+  "relays": {
+    "conditions": {
+      "answer_to_periods": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9270833333333334,
+        "accuracy_drop": 0.005208333333333333,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.0078125,
+          0.020833333333333332
+        ],
+        "mean_margin_drop": 1.0382486979166667,
+        "margin_drop_ci_95_hierarchical": [
+          0.8914388020833334,
+          1.2236653645833329
+        ],
+        "answer_flip_fraction": 0.010416666666666666,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": 0.9794921875,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.900390625,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.015625,
+            "mean_margin_drop": 1.23486328125,
+            "answer_flip_fraction": 0.015625
+          }
+        ]
+      },
+      "answer_to_period_controls": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9322916666666666,
+        "accuracy_drop": 0.0,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.0,
+          0.0
+        ],
+        "mean_margin_drop": -0.005533854166666667,
+        "margin_drop_ci_95_hierarchical": [
+          -0.014485677083333334,
+          0.0030924479166666665
+        ],
+        "answer_flip_fraction": 0.0,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.00244140625,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.0029296875,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.01123046875,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "answer_to_test_period": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9270833333333334,
+        "accuracy_drop": 0.005208333333333333,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.015625,
+          0.028645833333333332
+        ],
+        "mean_margin_drop": 1.134765625,
+        "margin_drop_ci_95_hierarchical": [
+          0.9763997395833334,
+          1.3483072916666667
+        ],
+        "answer_flip_fraction": 0.015625,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": 0.9951171875,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.015625,
+            "mean_margin_drop": 1.044921875,
+            "answer_flip_fraction": 0.015625
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0234375,
+            "mean_margin_drop": 1.3642578125,
+            "answer_flip_fraction": 0.0234375
+          }
+        ]
+      },
+      "answer_to_demo_labels": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9348958333333334,
+        "accuracy_drop": -0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.010416666666666666,
+          0.0
+        ],
+        "mean_margin_drop": 0.033365885416666664,
+        "margin_drop_ci_95_hierarchical": [
+          0.018229166666666668,
+          0.0498046875
+        ],
+        "answer_flip_fraction": 0.0026041666666666665,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.03173828125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.046875,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.021484375,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "demo_label_to_own_period": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9348958333333334,
+        "accuracy_drop": -0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.018229166666666668,
+          0.010416666666666666
+        ],
+        "mean_margin_drop": 0.007161458333333333,
+        "margin_drop_ci_95_hierarchical": [
+          -0.014973958333333334,
+          0.031412760416666664
+        ],
+        "answer_flip_fraction": 0.0078125,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": -0.001953125,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.015625,
+            "mean_margin_drop": -0.005859375,
+            "answer_flip_fraction": 0.015625
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": 0.029296875,
+            "answer_flip_fraction": 0.0
+          }
+        ]
+      },
+      "demo_label_to_control_token": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9348958333333334,
+        "accuracy_drop": -0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.015625,
+          0.010416666666666666
+        ],
+        "mean_margin_drop": 0.0035807291666666665,
+        "margin_drop_ci_95_hierarchical": [
+          -0.018229166666666668,
+          0.02669677734374994
+        ],
+        "answer_flip_fraction": 0.0078125,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": -0.0126953125,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.0185546875,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": 0.0048828125,
+            "answer_flip_fraction": 0.0078125
+          }
+        ]
+      },
+      "test_source_blackout_20_22": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9296875,
+        "accuracy_drop": 0.0026041666666666665,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.010416666666666666,
+          0.020833333333333332
+        ],
+        "mean_margin_drop": -0.028971354166666668,
+        "margin_drop_ci_95_hierarchical": [
+          -0.09147135416666667,
+          0.07438151041666667
+        ],
+        "answer_flip_fraction": 0.0078125,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0,
+            "mean_margin_drop": -0.07470703125,
+            "answer_flip_fraction": 0.0
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": -0.087890625,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.015625,
+            "mean_margin_drop": 0.07568359375,
+            "answer_flip_fraction": 0.015625
+          }
+        ]
+      },
+      "test_source_blackout_23_39": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.5286458333333334,
+        "accuracy_drop": 0.4036458333333333,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.3541666666666667,
+          0.4427083333333333
+        ],
+        "mean_margin_drop": 5.03271484375,
+        "margin_drop_ci_95_hierarchical": [
+          4.57437744140625,
+          5.583182779947917
+        ],
+        "answer_flip_fraction": 0.4661458333333333,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.4296875,
+            "mean_margin_drop": 5.61767578125,
+            "answer_flip_fraction": 0.4609375
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.4140625,
+            "mean_margin_drop": 4.63671875,
+            "answer_flip_fraction": 0.4765625
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.3671875,
+            "mean_margin_drop": 4.84375,
+            "answer_flip_fraction": 0.4609375
+          }
+        ]
+      },
+      "test_source_blackout_all": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.5,
+        "accuracy_drop": 0.4322916666666667,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.3932291666666667,
+          0.46875
+        ],
+        "mean_margin_drop": 5.156901041666667,
+        "margin_drop_ci_95_hierarchical": [
+          4.7073486328125,
+          5.65999755859375
+        ],
+        "answer_flip_fraction": 0.4947916666666667,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.46875,
+            "mean_margin_drop": 5.69140625,
+            "answer_flip_fraction": 0.5
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.421875,
+            "mean_margin_drop": 4.75390625,
+            "answer_flip_fraction": 0.5
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.40625,
+            "mean_margin_drop": 5.025390625,
+            "answer_flip_fraction": 0.484375
+          }
+        ]
+      },
+      "all_period_source_blackout": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.5,
+        "accuracy_drop": 0.4322916666666667,
+        "accuracy_drop_ci_95_hierarchical": [
+          0.3932291666666667,
+          0.46875
+        ],
+        "mean_margin_drop": 5.156901041666667,
+        "margin_drop_ci_95_hierarchical": [
+          4.700187174479167,
+          5.666182454427084
+        ],
+        "answer_flip_fraction": 0.4947916666666667,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.46875,
+            "mean_margin_drop": 5.69140625,
+            "answer_flip_fraction": 0.5
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": 0.421875,
+            "mean_margin_drop": 4.75390625,
+            "answer_flip_fraction": 0.484375
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": 0.40625,
+            "mean_margin_drop": 5.025390625,
+            "answer_flip_fraction": 0.5
+          }
+        ]
+      },
+      "all_period_control_blackout": {
+        "n_trials": 384,
+        "n_episodes": 96,
+        "baseline_accuracy": 0.9322916666666666,
+        "changed_accuracy": 0.9401041666666666,
+        "accuracy_drop": -0.0078125,
+        "accuracy_drop_ci_95_hierarchical": [
+          -0.028645833333333332,
+          0.010416666666666666
+        ],
+        "mean_margin_drop": -0.07568359375,
+        "margin_drop_ci_95_hierarchical": [
+          -0.1201171875,
+          -0.033365885416666664
+        ],
+        "answer_flip_fraction": 0.018229166666666668,
+        "per_seed": [
+          {
+            "model_condition": "seed-20260820",
+            "n_trials": 128,
+            "accuracy_drop": 0.0078125,
+            "mean_margin_drop": -0.04443359375,
+            "answer_flip_fraction": 0.0078125
+          },
+          {
+            "model_condition": "seed-20260821",
+            "n_trials": 128,
+            "accuracy_drop": -0.0078125,
+            "mean_margin_drop": -0.0869140625,
+            "answer_flip_fraction": 0.0234375
+          },
+          {
+            "model_condition": "seed-20260822",
+            "n_trials": 128,
+            "accuracy_drop": -0.0234375,
+            "mean_margin_drop": -0.095703125,
+            "answer_flip_fraction": 0.0234375
+          }
+        ]
+      }
+    }
+  },
+  "audit": {
+    "path": "/data/kv-path-study-audit.json",
+    "transport_rows": 35712,
+    "transport_followup_rows": 2304,
+    "binding_rows": 3072,
+    "geometry_behavior_rows": 1920,
+    "relay_rows": 4224
+  },
+  "interpretation_limit": "These experiments test trained functional access to a deliberately injected earlier activation. They do not establish general policy introspection, subjective awareness, or phenomenological introspection."
+}

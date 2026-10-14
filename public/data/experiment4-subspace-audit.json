@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "description": "Every in-span and orthogonal-holdout trial for the three span-restricted adapters.",
+  "trial_count": 24576,
+  "chunks": [
+    "/data/experiment4-subspace-audit-seed-20260830.json",
+    "/data/experiment4-subspace-audit-seed-20260831.json",
+    "/data/experiment4-subspace-audit-seed-20260832.json"
+  ]
+}

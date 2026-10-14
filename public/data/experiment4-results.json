@@ -1,0 +1,1278 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "model_id": "Qwen/Qwen3-14B",
+  "model_revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+  "protocol_frozen_before_results": true,
+  "evaluation_seed": 20260901,
+  "fixed_adapter_conditions": [
+    {
+      "id": "id_reference",
+      "n_trials_per_seed": 512,
+      "base_accuracy": 0.5,
+      "mean_accuracy": 0.9361979166666666,
+      "min_accuracy": 0.91796875,
+      "max_accuracy": 0.95703125,
+      "mean_margin": 5.187215169270833,
+      "episode_cluster_ci_95": [
+        0.912109375,
+        0.9583333333333334
+      ],
+      "per_seed": [
+        {
+          "seed": 20260820,
+          "accuracy": 0.93359375,
+          "mean_margin": 5.4134521484375,
+          "cluster_ci_95": [
+            0.904296875,
+            0.958984375
+          ]
+        },
+        {
+          "seed": 20260821,
+          "accuracy": 0.91796875,
+          "mean_margin": 5.0054931640625,
+          "cluster_ci_95": [
+            0.880859375,
+            0.951171875
+          ]
+        },
+        {
+          "seed": 20260822,
+          "accuracy": 0.95703125,
+          "mean_margin": 5.1427001953125,
+          "cluster_ci_95": [
+            0.93359375,
+            0.978515625
+          ]
+        }
+      ],
+      "specification": {
+        "layer": 20,
+        "vector_family": "gaussian",
+        "pair_cosine": 0.0,
+        "direction_mode": "full"
+      }
+    },
+    {
+      "id": "prompt_paraphrase",
+      "n_trials_per_seed": 256,
+      "base_accuracy": 0.5,
+      "mean_accuracy": 0.6015625,
+      "min_accuracy": 0.59375,
+      "max_accuracy": 0.609375,
+      "mean_margin": 0.832763671875,
+      "episode_cluster_ci_95": [
+        0.57421875,
+        0.6302083333333333
+      ],
+      "per_seed": [
+        {
+          "seed": 20260820,
+          "accuracy": 0.609375,
+          "mean_margin": 1.145263671875,
+          "cluster_ci_95": [
+            0.57421875,
+            0.6484375
+          ]
+        },
+        {
+          "seed": 20260821,
+          "accuracy": 0.59375,
+          "mean_margin": 0.7060546875,
+          "cluster_ci_95": [
+            0.55859375,
+            0.62890625
+          ]
+        },
+        {
+          "seed": 20260822,
+          "accuracy": 0.6015625,
+          "mean_margin": 0.64697265625,
+          "cluster_ci_95": [
+            0.56640625,
+            0.640625
+          ]
+        }
+      ],
+      "specification": {
+        "layer": 20,
+        "vector_family": "gaussian",
+        "pair_cosine": 0.0,
+        "direction_mode": "full",
+        "prompt": "paraphrase"
+      }
+    },
+    {
+      "id": "different_carriers",
+      "n_trials_per_seed": 256,
+      "base_accuracy": 0.5,
+      "mean_accuracy": 0.7239583333333334,
+      "min_accuracy": 0.6953125,
+      "max_accuracy": 0.74609375,
+      "mean_margin": 1.27392578125,
+      "episode_cluster_ci_95": [
+        0.69140625,
+        0.7565104166666666
+      ],
+      "per_seed": [
+        {
+          "seed": 20260820,
+          "accuracy": 0.74609375,
+          "mean_margin": 1.331787109375,
+          "cluster_ci_95": [
+            0.69921875,
+            0.79296875
+          ]
+        },
+        {
+          "seed": 20260821,
+          "accuracy": 0.6953125,
+          "mean_margin": 1.228515625,
+          "cluster_ci_95": [
+            0.6484375,
+            0.7421875
+          ]
+        },
+        {
+          "seed": 20260822,
+          "accuracy": 0.73046875,
+          "mean_margin": 1.261474609375,
+          "cluster_ci_95": [
+            0.6796875,
+            0.78125
+          ]
+        }
+      ],
+      "specification": {
+        "layer": 20,
+        "vector_family": "gaussian",
+        "pair_cosine": 0.0,
+        "direction_mode": "full",
+        "carrier": "different"
+      }
+    },
+    {
+      "id": "content_token",
+      "n_trials_per_seed": 256,
+      "base_accuracy": 0.5,
+      "mean_accuracy": 0.4986979166666667,
+      "min_accuracy": 0.4921875,
+      "max_accuracy": 0.50390625,
+      "mean_margin": 0.0048828125,
+      "episode_cluster_ci_95": [
+        0.49348958333333337,
+        0.5026041666666667
+      ],
+      "per_seed": [
+        {
+          "seed": 20260820,
+          "accuracy": 0.5,
+          "mean_margin": 0.0029296875,
+          "cluster_ci_95": [
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "seed": 20260821,
+          "accuracy": 0.50390625,
+          "mean_margin": 0.0048828125,
+          "cluster_ci_95": [
+            0.5,
+            0.51171875
+          ]
+        },
+        {
+          "seed": 20260822,
+          "accuracy": 0.4921875,
+          "mean_margin": 0.0068359375,
+          "cluster_ci_95": [
+            0.48046875,
+            0.5
+          ]
+        }
+      ],
+      "specification": {
+        "layer": 20,
+        "vector_family": "gaussian",
+        "pair_cosine": 0.0,
+        "direction_mode": "full",
+        "site": "content"
+      }
+    },
+    {
+      "id": "cross_position",
+      "n_trials_per_seed": 256,
+      "base_accuracy": 0.5,
+      "mean_accuracy": 0.48828125,
+      "min_accuracy": 0.48046875,
+      "max_accuracy": 0.49609375,
+      "mean_margin": -0.064697265625,
+      "episode_cluster_ci_95": [
+        0.4791666666666667,
+        0.4947916666666667
+      ],
+      "per_seed": [
+        {
+          "seed": 20260820,
+          "accuracy": 0.48828125,
+          "mean_margin": -0.042724609375,
+          "cluster_ci_95": [
+            0.47265625,
+            0.5
+          ]
+        },
+        {
+          "seed": 20260821,
+          "accuracy": 0.48046875,
+          "mean_margin": -0.0810546875,
+          "cluster_ci_95": [
+            0.4609375,
+            0.49609375
+          ]
+        },
+        {
+          "seed": 20260822,
+          "accuracy": 0.49609375,
+          "mean_margin": -0.0703125,
+          "cluster_ci_95": [
+            0.484375,
+            0.5078125
+          ]
+        }
+      ],
+      "specification": {
+        "layer": 20,
+        "vector_family": "gaussian",
+        "pair_cosine": 0.0,
+        "direction_mode": "full",
+        "site": "cross"
+      }
+    },
+    {
+      "id": "layer_16",
+      "n_trials_per_seed": 256,
+      "base_accuracy": 0.5,
+      "mean_accuracy": 0.6393229166666666,
+      "min_accuracy": 0.62890625,
+      "max_accuracy": 0.65625,
+      "mean_margin": 0.985107421875,
+      "episode_cluster_ci_95": [
+        0.6106770833333334,
+        0.66796875
+      ],
+      "per_seed": [
+        {
+          "seed": 20260820,
+          "accuracy": 0.6328125,
+          "mean_margin": 1.12744140625,
+          "cluster_ci_95": [
+            0.59765625,
+            0.671875
+          ]
+        },
+        {
+          "seed": 20260821,
+          "accuracy": 0.62890625,
+          "mean_margin": 0.8544921875,
+          "cluster_ci_95": [
+            0.58984375,
+            0.671875
+          ]
+        },
+        {
+          "seed": 20260822,
+          "accuracy": 0.65625,
+          "mean_margin": 0.973388671875,
+          "cluster_ci_95": [
+            0.61328125,
+            0.703125
+          ]
+        }
+      ],
+      "specification": {
+        "layer": 16,
+        "vector_family": "gaussian",
+        "pair_cosine": 0.0,
+        "direction_mode": "full"
+      }
+    },
+    {
+      "id": "layer_24",
+      "n_trials_per_seed": 256,
+      "base_accuracy": 0.5,
+      "mean_accuracy": 0.4986979166666667,
+      "min_accuracy": 0.49609375,
+      "max_accuracy": 0.5,
+      "mean_margin": 0.0008138020833333334,
+      "episode_cluster_ci_95": [
+        0.49609375,
+        0.5
+      ],
+      "per_seed": [
+        {
+          "seed": 20260820,
+          "accuracy": 0.5,
+          "mean_margin": 0.0009765625,
+          "cluster_ci_95": [
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "seed": 20260821,
+          "accuracy": 0.49609375,
+          "mean_margin": 0.0048828125,
+          "cluster_ci_95": [
+            0.48828125,
+            0.5
+          ]
+        },
+        {
+          "seed": 20260822,
+          "accuracy": 0.5,
+          "mean_margin": -0.00341796875,
+          "cluster_ci_95": [
+            0.5,
+            0.5
+          ]
+        }
+      ],
+      "specification": {
+        "layer": 24,
+        "vector_family": "gaussian",
+        "pair_cosine": 0.0,
+        "direction_mode": "full"
+      }
+    },
+    {
+      "id": "correlated_0_5",
+      "n_trials_per_seed": 256,
+      "base_accuracy": 0.5,
+      "mean_accuracy": 0.7994791666666666,
+      "min_accuracy": 0.7890625,
+      "max_accuracy": 0.8203125,
+      "mean_margin": 2.9734700520833335,
+      "episode_cluster_ci_95": [
+        0.7630208333333333,
+        0.8346354166666666
+      ],
+      "per_seed": [
+        {
+          "seed": 20260820,
+          "accuracy": 0.7890625,
+          "mean_margin": 3.28564453125,
+          "cluster_ci_95": [
+            0.7421875,
+            0.8359375
+          ]
+        },
+        {
+          "seed": 20260821,
+          "accuracy": 0.8203125,
+          "mean_margin": 2.74560546875,
+          "cluster_ci_95": [
+            0.7734375,
+            0.8671875
+          ]
+        },
+        {
+          "seed": 20260822,
+          "accuracy": 0.7890625,
+          "mean_margin": 2.88916015625,
+          "cluster_ci_95": [
+            0.7421875,
+            0.8359375
+          ]
+        }
+      ],
+      "specification": {
+        "layer": 20,
+        "vector_family": "gaussian",
+        "pair_cosine": 0.5,
+        "direction_mode": "full"
+      }
+    },
+    {
+      "id": "correlated_0_9",
+      "n_trials_per_seed": 256,
+      "base_accuracy": 0.5,
+      "mean_accuracy": 0.5625,
+      "min_accuracy": 0.55078125,
+      "max_accuracy": 0.57421875,
+      "mean_margin": 0.5673828125,
+      "episode_cluster_ci_95": [
+        0.54296875,
+        0.5846354166666667
+      ],
+      "per_seed": [
+        {
+          "seed": 20260820,
+          "accuracy": 0.5625,
+          "mean_margin": 0.603271484375,
+          "cluster_ci_95": [
+            0.53125,
+            0.59765625
+          ]
+        },
+        {
+          "seed": 20260821,
+          "accuracy": 0.55078125,
+          "mean_margin": 0.5322265625,
+          "cluster_ci_95": [
+            0.52734375,
+            0.578125
+          ]
+        },
+        {
+          "seed": 20260822,
+          "accuracy": 0.57421875,
+          "mean_margin": 0.566650390625,
+          "cluster_ci_95": [
+            0.54296875,
+            0.609375
+          ]
+        }
+      ],
+      "specification": {
+        "layer": 20,
+        "vector_family": "gaussian",
+        "pair_cosine": 0.9,
+        "direction_mode": "full"
+      }
+    },
+    {
+      "id": "student_t_3",
+      "n_trials_per_seed": 256,
+      "base_accuracy": 0.5,
+      "mean_accuracy": 0.9401041666666666,
+      "min_accuracy": 0.92578125,
+      "max_accuracy": 0.94921875,
+      "mean_margin": 5.220133463541667,
+      "episode_cluster_ci_95": [
+        0.9166666666666666,
+        0.9609375
+      ],
+      "per_seed": [
+        {
+          "seed": 20260820,
+          "accuracy": 0.9453125,
+          "mean_margin": 5.456298828125,
+          "cluster_ci_95": [
+            0.9140625,
+            0.97265625
+          ]
+        },
+        {
+          "seed": 20260821,
+          "accuracy": 0.92578125,
+          "mean_margin": 4.9462890625,
+          "cluster_ci_95": [
+            0.89453125,
+            0.95703125
+          ]
+        },
+        {
+          "seed": 20260822,
+          "accuracy": 0.94921875,
+          "mean_margin": 5.2578125,
+          "cluster_ci_95": [
+            0.91796875,
+            0.9765625
+          ]
+        }
+      ],
+      "specification": {
+        "layer": 20,
+        "vector_family": "student-t3",
+        "pair_cosine": 0.0,
+        "direction_mode": "full"
+      }
+    },
+    {
+      "id": "natural_activation_difference",
+      "n_trials_per_seed": 256,
+      "base_accuracy": 0.5,
+      "mean_accuracy": 0.94921875,
+      "min_accuracy": 0.9375,
+      "max_accuracy": 0.96484375,
+      "mean_margin": 5.993977864583333,
+      "episode_cluster_ci_95": [
+        0.92578125,
+        0.9700520833333333
+      ],
+      "per_seed": [
+        {
+          "seed": 20260820,
+          "accuracy": 0.9453125,
+          "mean_margin": 6.267333984375,
+          "cluster_ci_95": [
+            0.91796875,
+            0.97265625
+          ]
+        },
+        {
+          "seed": 20260821,
+          "accuracy": 0.9375,
+          "mean_margin": 5.561767578125,
+          "cluster_ci_95": [
+            0.90625,
+            0.96484375
+          ]
+        },
+        {
+          "seed": 20260822,
+          "accuracy": 0.96484375,
+          "mean_margin": 6.15283203125,
+          "cluster_ci_95": [
+            0.94140625,
+            0.984375
+          ]
+        }
+      ],
+      "specification": {
+        "layer": 20,
+        "vector_family": "activation-difference",
+        "pair_cosine": 0.0,
+        "direction_mode": "full"
+      }
+    },
+    {
+      "id": "dense_train_half",
+      "n_trials_per_seed": 256,
+      "base_accuracy": 0.5,
+      "mean_accuracy": 0.9427083333333334,
+      "min_accuracy": 0.93359375,
+      "max_accuracy": 0.94921875,
+      "mean_margin": 5.154622395833333,
+      "episode_cluster_ci_95": [
+        0.91796875,
+        0.96484375
+      ],
+      "per_seed": [
+        {
+          "seed": 20260820,
+          "accuracy": 0.9453125,
+          "mean_margin": 5.414794921875,
+          "cluster_ci_95": [
+            0.9140625,
+            0.97265625
+          ]
+        },
+        {
+          "seed": 20260821,
+          "accuracy": 0.93359375,
+          "mean_margin": 4.885498046875,
+          "cluster_ci_95": [
+            0.8984375,
+            0.96484375
+          ]
+        },
+        {
+          "seed": 20260822,
+          "accuracy": 0.94921875,
+          "mean_margin": 5.16357421875,
+          "cluster_ci_95": [
+            0.921875,
+            0.97265625
+          ]
+        }
+      ],
+      "specification": {
+        "layer": 20,
+        "vector_family": "gaussian",
+        "pair_cosine": 0.0,
+        "direction_mode": "subspace-train"
+      }
+    },
+    {
+      "id": "dense_holdout_half",
+      "n_trials_per_seed": 256,
+      "base_accuracy": 0.5,
+      "mean_accuracy": 0.95703125,
+      "min_accuracy": 0.94140625,
+      "max_accuracy": 0.97265625,
+      "mean_margin": 5.256754557291667,
+      "episode_cluster_ci_95": [
+        0.9348958333333335,
+        0.9765625
+      ],
+      "per_seed": [
+        {
+          "seed": 20260820,
+          "accuracy": 0.97265625,
+          "mean_margin": 5.61669921875,
+          "cluster_ci_95": [
+            0.94921875,
+            0.9921875
+          ]
+        },
+        {
+          "seed": 20260821,
+          "accuracy": 0.94140625,
+          "mean_margin": 4.8896484375,
+          "cluster_ci_95": [
+            0.90625,
+            0.97265625
+          ]
+        },
+        {
+          "seed": 20260822,
+          "accuracy": 0.95703125,
+          "mean_margin": 5.263916015625,
+          "cluster_ci_95": [
+            0.9296875,
+            0.98046875
+          ]
+        }
+      ],
+      "specification": {
+        "layer": 20,
+        "vector_family": "gaussian",
+        "pair_cosine": 0.0,
+        "direction_mode": "subspace-holdout"
+      }
+    },
+    {
+      "id": "joint_ood",
+      "n_trials_per_seed": 1024,
+      "base_accuracy": 0.5,
+      "mean_accuracy": 0.4993489583333333,
+      "min_accuracy": 0.498046875,
+      "max_accuracy": 0.5,
+      "mean_margin": 0.00067138671875,
+      "episode_cluster_ci_95": [
+        0.49739583333333337,
+        0.5009765625
+      ],
+      "per_seed": [
+        {
+          "seed": 20260820,
+          "accuracy": 0.5,
+          "mean_margin": -0.00018310546875,
+          "cluster_ci_95": [
+            0.4970703125,
+            0.5029296875
+          ]
+        },
+        {
+          "seed": 20260821,
+          "accuracy": 0.5,
+          "mean_margin": 0.0013427734375,
+          "cluster_ci_95": [
+            0.49609375,
+            0.50390625
+          ]
+        },
+        {
+          "seed": 20260822,
+          "accuracy": 0.498046875,
+          "mean_margin": 0.0008544921875,
+          "cluster_ci_95": [
+            0.4951171875,
+            0.5
+          ]
+        }
+      ],
+      "specification": {
+        "layer": 24,
+        "vector_family": "student-t3",
+        "pair_cosine": 0.5,
+        "direction_mode": "full",
+        "prompt": "paraphrase",
+        "carrier": "different",
+        "site": "cross"
+      }
+    }
+  ],
+  "morph": [
+    {
+      "angle_degrees": 0,
+      "n_trials_per_seed": 128,
+      "mean_label_v2_minus_v1_logit": -5.023600260416667,
+      "mean_fraction_preferring_v2": 0.0546875,
+      "per_seed": [
+        {
+          "seed": 20260820,
+          "mean_logit_contrast": -5.28515625,
+          "fraction_preferring_v2": 0.046875
+        },
+        {
+          "seed": 20260821,
+          "mean_logit_contrast": -4.7978515625,
+          "fraction_preferring_v2": 0.0546875
+        },
+        {
+          "seed": 20260822,
+          "mean_logit_contrast": -4.98779296875,
+          "fraction_preferring_v2": 0.0625
+        }
+      ]
+    },
+    {
+      "angle_degrees": 15,
+      "n_trials_per_seed": 128,
+      "mean_label_v2_minus_v1_logit": -3.7550455729166665,
+      "mean_fraction_preferring_v2": 0.140625,
+      "per_seed": [
+        {
+          "seed": 20260820,
+          "mean_logit_contrast": -4.0390625,
+          "fraction_preferring_v2": 0.140625
+        },
+        {
+          "seed": 20260821,
+          "mean_logit_contrast": -3.5556640625,
+          "fraction_preferring_v2": 0.15625
+        },
+        {
+          "seed": 20260822,
+          "mean_logit_contrast": -3.67041015625,
+          "fraction_preferring_v2": 0.125
+        }
+      ]
+    },
+    {
+      "angle_degrees": 30,
+      "n_trials_per_seed": 128,
+      "mean_label_v2_minus_v1_logit": -1.97314453125,
+      "mean_fraction_preferring_v2": 0.2864583333333333,
+      "per_seed": [
+        {
+          "seed": 20260820,
+          "mean_logit_contrast": -2.1142578125,
+          "fraction_preferring_v2": 0.296875
+        },
+        {
+          "seed": 20260821,
+          "mean_logit_contrast": -1.9033203125,
+          "fraction_preferring_v2": 0.28125
+        },
+        {
+          "seed": 20260822,
+          "mean_logit_contrast": -1.90185546875,
+          "fraction_preferring_v2": 0.28125
+        }
+      ]
+    },
+    {
+      "angle_degrees": 45,
+      "n_trials_per_seed": 128,
+      "mean_label_v2_minus_v1_logit": 0.19612630208333334,
+      "mean_fraction_preferring_v2": 0.5130208333333334,
+      "per_seed": [
+        {
+          "seed": 20260820,
+          "mean_logit_contrast": 0.3017578125,
+          "fraction_preferring_v2": 0.5234375
+        },
+        {
+          "seed": 20260821,
+          "mean_logit_contrast": 0.0576171875,
+          "fraction_preferring_v2": 0.4765625
+        },
+        {
+          "seed": 20260822,
+          "mean_logit_contrast": 0.22900390625,
+          "fraction_preferring_v2": 0.5390625
+        }
+      ]
+    },
+    {
+      "angle_degrees": 60,
+      "n_trials_per_seed": 128,
+      "mean_label_v2_minus_v1_logit": 2.3312174479166665,
+      "mean_fraction_preferring_v2": 0.7369791666666666,
+      "per_seed": [
+        {
+          "seed": 20260820,
+          "mean_logit_contrast": 2.6484375,
+          "fraction_preferring_v2": 0.7265625
+        },
+        {
+          "seed": 20260821,
+          "mean_logit_contrast": 2.0263671875,
+          "fraction_preferring_v2": 0.75
+        },
+        {
+          "seed": 20260822,
+          "mean_logit_contrast": 2.31884765625,
+          "fraction_preferring_v2": 0.734375
+        }
+      ]
+    },
+    {
+      "angle_degrees": 75,
+      "n_trials_per_seed": 128,
+      "mean_label_v2_minus_v1_logit": 4.087565104166667,
+      "mean_fraction_preferring_v2": 0.890625,
+      "per_seed": [
+        {
+          "seed": 20260820,
+          "mean_logit_contrast": 4.4599609375,
+          "fraction_preferring_v2": 0.8828125
+        },
+        {
+          "seed": 20260821,
+          "mean_logit_contrast": 3.7265625,
+          "fraction_preferring_v2": 0.8828125
+        },
+        {
+          "seed": 20260822,
+          "mean_logit_contrast": 4.076171875,
+          "fraction_preferring_v2": 0.90625
+        }
+      ]
+    },
+    {
+      "angle_degrees": 90,
+      "n_trials_per_seed": 128,
+      "mean_label_v2_minus_v1_logit": 5.294596354166667,
+      "mean_fraction_preferring_v2": 0.9479166666666666,
+      "per_seed": [
+        {
+          "seed": 20260820,
+          "mean_logit_contrast": 5.61962890625,
+          "fraction_preferring_v2": 0.9609375
+        },
+        {
+          "seed": 20260821,
+          "mean_logit_contrast": 4.9501953125,
+          "fraction_preferring_v2": 0.9296875
+        },
+        {
+          "seed": 20260822,
+          "mean_logit_contrast": 5.31396484375,
+          "fraction_preferring_v2": 0.953125
+        }
+      ]
+    }
+  ],
+  "subspace": {
+    "basis": "fixed signed, permuted block-Walsh-Hadamard orthonormal basis",
+    "dimension": 5120,
+    "train_dimension": 2560,
+    "holdout_dimension": 2560,
+    "dot_product_numerical_check_max": 1.862645149230957e-09,
+    "success_gate": "each holdout accuracy >75% and mean holdout gap <=10 percentage points",
+    "passed": true,
+    "mean_train_accuracy": 0.9580891927083334,
+    "mean_holdout_accuracy": 0.947265625,
+    "mean_holdout_gap": 0.010823567708333334,
+    "runs": [
+      {
+        "seed": 20260830,
+        "train_span": {
+          "n_trials": 4096,
+          "n_correct": 3891,
+          "accuracy": 0.949951171875,
+          "ci_95_wilson_descriptive": [
+            0.9428418769954561,
+            0.9562172785896152
+          ],
+          "mean_margin": 4.53631591796875,
+          "median_margin": 4.5,
+          "prediction_counts": {
+            "A": 2053,
+            "B": 2043
+          },
+          "id": "dense_train_half",
+          "direction_mode": "subspace-train",
+          "episodes": 256,
+          "orbit": 8,
+          "layer": 20,
+          "vector_family": "gaussian",
+          "pair_cosine": 0.0,
+          "cluster_bootstrap_ci_95": [
+            0.936767578125,
+            0.962646484375
+          ]
+        },
+        "holdout_span": {
+          "n_trials": 4096,
+          "n_correct": 3850,
+          "accuracy": 0.93994140625,
+          "ci_95_wilson_descriptive": [
+            0.9322447036840906,
+            0.9468136784994678
+          ],
+          "mean_margin": 4.4019012451171875,
+          "median_margin": 4.5,
+          "prediction_counts": {
+            "A": 2060,
+            "B": 2036
+          },
+          "id": "dense_holdout_half",
+          "direction_mode": "subspace-holdout",
+          "episodes": 256,
+          "orbit": 8,
+          "layer": 20,
+          "vector_family": "gaussian",
+          "pair_cosine": 0.0,
+          "cluster_bootstrap_ci_95": [
+            0.926025390625,
+            0.953369140625
+          ]
+        },
+        "holdout_gap": 0.010009765625,
+        "training": {
+          "steps": 2500,
+          "trainable_parameters": 32112640,
+          "best_validation_accuracy": 0.96875,
+          "duration_seconds": 602.6206648349762,
+          "gpu": "NVIDIA H100 NVL",
+          "direction_mode": "subspace-train",
+          "subspace_seed": 20260830,
+          "subspace_construction": "deterministic signed, permuted block-Walsh-Hadamard basis; training and holdout supports partition its 5120 basis coordinates exactly"
+        }
+      },
+      {
+        "seed": 20260831,
+        "train_span": {
+          "n_trials": 4096,
+          "n_correct": 3957,
+          "accuracy": 0.966064453125,
+          "ci_95_wilson_descriptive": [
+            0.9600682201539498,
+            0.971187302370142
+          ],
+          "mean_margin": 4.6681671142578125,
+          "median_margin": 5.0625,
+          "prediction_counts": {
+            "A": 2059,
+            "B": 2037
+          },
+          "id": "dense_train_half",
+          "direction_mode": "subspace-train",
+          "episodes": 256,
+          "orbit": 8,
+          "layer": 20,
+          "vector_family": "gaussian",
+          "pair_cosine": 0.0,
+          "cluster_bootstrap_ci_95": [
+            0.955078125,
+            0.97607421875
+          ]
+        },
+        "holdout_span": {
+          "n_trials": 4096,
+          "n_correct": 3878,
+          "accuracy": 0.94677734375,
+          "ci_95_wilson_descriptive": [
+            0.9394747174237471,
+            0.9532427295218201
+          ],
+          "mean_margin": 4.5273284912109375,
+          "median_margin": 5.0,
+          "prediction_counts": {
+            "A": 2064,
+            "B": 2032
+          },
+          "id": "dense_holdout_half",
+          "direction_mode": "subspace-holdout",
+          "episodes": 256,
+          "orbit": 8,
+          "layer": 20,
+          "vector_family": "gaussian",
+          "pair_cosine": 0.0,
+          "cluster_bootstrap_ci_95": [
+            0.93310546875,
+            0.95947265625
+          ]
+        },
+        "holdout_gap": 0.019287109375,
+        "training": {
+          "steps": 2500,
+          "trainable_parameters": 32112640,
+          "best_validation_accuracy": 0.8828125,
+          "duration_seconds": 609.0801069736481,
+          "gpu": "NVIDIA H100 NVL",
+          "direction_mode": "subspace-train",
+          "subspace_seed": 20260830,
+          "subspace_construction": "deterministic signed, permuted block-Walsh-Hadamard basis; training and holdout supports partition its 5120 basis coordinates exactly"
+        }
+      },
+      {
+        "seed": 20260832,
+        "train_span": {
+          "n_trials": 4096,
+          "n_correct": 3925,
+          "accuracy": 0.958251953125,
+          "ci_95_wilson_descriptive": [
+            0.9516851324633817,
+            0.9639600303327001
+          ],
+          "mean_margin": 5.965789794921875,
+          "median_margin": 6.625,
+          "prediction_counts": {
+            "A": 2063,
+            "B": 2033
+          },
+          "id": "dense_train_half",
+          "direction_mode": "subspace-train",
+          "episodes": 256,
+          "orbit": 8,
+          "layer": 20,
+          "vector_family": "gaussian",
+          "pair_cosine": 0.0,
+          "cluster_bootstrap_ci_95": [
+            0.94677734375,
+            0.96923828125
+          ]
+        },
+        "holdout_span": {
+          "n_trials": 4096,
+          "n_correct": 3912,
+          "accuracy": 0.955078125,
+          "ci_95_wilson_descriptive": [
+            0.9482970594777964,
+            0.9610063946787812
+          ],
+          "mean_margin": 5.8122711181640625,
+          "median_margin": 6.5,
+          "prediction_counts": {
+            "A": 2062,
+            "B": 2034
+          },
+          "id": "dense_holdout_half",
+          "direction_mode": "subspace-holdout",
+          "episodes": 256,
+          "orbit": 8,
+          "layer": 20,
+          "vector_family": "gaussian",
+          "pair_cosine": 0.0,
+          "cluster_bootstrap_ci_95": [
+            0.942138671875,
+            0.966552734375
+          ]
+        },
+        "holdout_gap": 0.003173828125,
+        "training": {
+          "steps": 2500,
+          "trainable_parameters": 32112640,
+          "best_validation_accuracy": 0.96875,
+          "duration_seconds": 602.6804563999176,
+          "gpu": "NVIDIA H100 NVL",
+          "direction_mode": "subspace-train",
+          "subspace_seed": 20260830,
+          "subspace_construction": "deterministic signed, permuted block-Walsh-Hadamard basis; training and holdout supports partition its 5120 basis coordinates exactly"
+        }
+      }
+    ]
+  },
+  "mechanistic": {
+    "verdict": "Block 22 head 17 is a reliable causal marker-matching component within a redundant circuit. The evidence does not justify the broader label 'general introspection head'.",
+    "discovery_trials_per_model": 64,
+    "confirmation_trials_per_model": 256,
+    "head_summaries": [
+      {
+        "layer": 22,
+        "head": 17,
+        "role_hypothesis": "marker matcher",
+        "attention": {
+          "mean_match_probability_contrast": 0.39601866404215497,
+          "per_seed": [
+            0.4544057846069336,
+            0.3232421875,
+            0.41040802001953125
+          ]
+        },
+        "mean_ablation": {
+          "mean_accuracy_drop": 0.07161458333333333,
+          "mean_margin_drop": 1.6555989583333333,
+          "per_seed_accuracy_drop": [
+            0.0625,
+            0.06640625,
+            0.0859375
+          ],
+          "per_seed_margin_drop": [
+            1.55859375,
+            1.630126953125,
+            1.778076171875
+          ],
+          "per_seed_general_lm_nll_change": [
+            -0.0029075095603419143,
+            -0.0009983738621439642,
+            -0.004614019537115155
+          ]
+        },
+        "counterfactual_patch": {
+          "mean_margin_reduction": 3.3165690104166665,
+          "mean_answer_flip_fraction": 0.30859375,
+          "per_seed_margin_reduction": [
+            3.336669921875,
+            3.326904296875,
+            3.2861328125
+          ],
+          "per_seed_answer_flip_fraction": [
+            0.3046875,
+            0.3203125,
+            0.30078125
+          ]
+        },
+        "weight_diagnostics": {
+          "mean_q_delta_relative_norm": 0.026794951409101486,
+          "mean_delta_qk_rowspace_alignment": 0.297126109401385
+        }
+      },
+      {
+        "layer": 20,
+        "head": 29,
+        "role_hypothesis": "early marker processor",
+        "attention": {
+          "mean_match_probability_contrast": -3.138339767853419e-05,
+          "per_seed": [
+            -9.298324584960938e-06,
+            -2.2676773369312286e-05,
+            -6.217509508132935e-05
+          ]
+        },
+        "mean_ablation": {
+          "mean_accuracy_drop": 0.07161458333333333,
+          "mean_margin_drop": 1.588134765625,
+          "per_seed_accuracy_drop": [
+            0.04296875,
+            0.109375,
+            0.0625
+          ],
+          "per_seed_margin_drop": [
+            1.353271484375,
+            1.755615234375,
+            1.655517578125
+          ],
+          "per_seed_general_lm_nll_change": [
+            -0.009837107615428664,
+            -0.009898600993571982,
+            -0.008015858876454729
+          ]
+        },
+        "counterfactual_patch": {
+          "mean_margin_reduction": 2.0352376302083335,
+          "mean_answer_flip_fraction": 0.19661458333333334,
+          "per_seed_margin_reduction": [
+            1.82763671875,
+            2.3447265625,
+            1.933349609375
+          ],
+          "per_seed_answer_flip_fraction": [
+            0.171875,
+            0.23046875,
+            0.1875
+          ]
+        },
+        "weight_diagnostics": {
+          "mean_q_delta_relative_norm": 0.05376969029506048,
+          "mean_delta_qk_rowspace_alignment": 0.4854363103707631
+        }
+      },
+      {
+        "layer": 23,
+        "head": 36,
+        "role_hypothesis": "answer router",
+        "attention": {
+          "mean_match_probability_contrast": 0.004166620473066966,
+          "per_seed": [
+            0.001970522105693817,
+            0.0031651854515075684,
+            0.007364153861999512
+          ]
+        },
+        "mean_ablation": {
+          "mean_accuracy_drop": 0.037760416666666664,
+          "mean_margin_drop": 1.8684895833333333,
+          "per_seed_accuracy_drop": [
+            0.01171875,
+            0.04296875,
+            0.05859375
+          ],
+          "per_seed_margin_drop": [
+            1.386474609375,
+            1.531982421875,
+            2.68701171875
+          ],
+          "per_seed_general_lm_nll_change": [
+            -0.0032081031226542933,
+            -0.001453754780170513,
+            -0.003579079567848531
+          ]
+        },
+        "counterfactual_patch": {
+          "mean_margin_reduction": 0.35986328125,
+          "mean_answer_flip_fraction": 0.09375,
+          "per_seed_margin_reduction": [
+            0.35986328125
+          ],
+          "per_seed_answer_flip_fraction": [
+            0.09375
+          ]
+        },
+        "weight_diagnostics": {
+          "mean_q_delta_relative_norm": 0.026258067538340885,
+          "mean_delta_qk_rowspace_alignment": 0.06386578145126502
+        }
+      }
+    ],
+    "head_22_17_specificity": {
+      "trained_primary_match_contrast": 0.4544057846069336,
+      "trained_no_test_match_contrast": 0.0,
+      "base_primary_match_contrast": 0.0057256221771240234,
+      "base_counterfactual_patch_margin_reduction": -0.00927734375,
+      "trained_control_head_22_8_patch_margin_reduction": -0.009033203125
+    },
+    "matcher_group": {
+      "members": [
+        "22.15",
+        "22.16",
+        "22.17",
+        "22.18",
+        "22.20",
+        "22.21"
+      ],
+      "accuracy_drop": 0.2578125,
+      "margin_drop": 4.07958984375,
+      "general_lm_nll_change": -0.018084918414508877
+    },
+    "matched_control_group": {
+      "members": [
+        "22.1",
+        "22.3",
+        "22.5",
+        "22.8",
+        "22.10",
+        "22.12"
+      ],
+      "accuracy_drop": 0.0,
+      "margin_drop": -0.015625,
+      "general_lm_nll_change": -0.014121299033408974
+    },
+    "candidate_selection": {
+      "discovery_adapter": 20260820,
+      "rankings": [
+        "trained-minus-base marker-match probability contrast",
+        "trained-minus-base marker-match attention log-ratio",
+        "answer-to-test attention",
+        "adapter Q/O relative norm"
+      ],
+      "confirmation_adapters": [
+        20260821,
+        20260822
+      ],
+      "negative_controls": [
+        "20.4",
+        "22.8",
+        "23.21",
+        "24.10",
+        "25.12"
+      ]
+    },
+    "interpretation_limit": "The task rewards matching externally injected residual perturbations. A marker-matching circuit can therefore be real and causal without constituting a domain-general faculty for introspection."
+  },
+  "artifacts": {
+    "ood_audit": "/data/experiment4-ood-audit.json",
+    "subspace_audit": "/data/experiment4-subspace-audit.json",
+    "morph_audit": "/data/experiment4-morph-audit.json",
+    "notebook": "/data/introspection-head-analysis.ipynb",
+    "protocol": "/data/experiment4-protocol.md"
+  }
+}
